@@ -1,0 +1,5523 @@
+<!DOCTYPE html>
+
+<html lang="bn">
+<head>
+<link href="../../styles.css" rel="stylesheet"/>
+<link href="../../styles.css" rel="stylesheet"/>
+<link href="../../styles.css" rel="stylesheet"/>
+<link href="../../styles.css" rel="stylesheet"/>
+<link href="../../styles.css" rel="stylesheet"/>
+<link href="../../styles.css" rel="stylesheet"/>
+<link href="../../styles.css" rel="stylesheet"/>
+<link href="../../styles.css" rel="stylesheet"/>
+<link href="../../styles.css" rel="stylesheet"/>
+<link href="../../styles.css" rel="stylesheet"/>
+<link href="../../styles.css" rel="stylesheet"/>
+<link href="../../styles.css" rel="stylesheet"/>
+<link href="../../styles.css" rel="stylesheet"/>
+<link href="../../styles.css" rel="stylesheet"/>
+<link href="../../styles.css" rel="stylesheet"/>
+<link href="../../styles.css" rel="stylesheet"/>
+<link href="../../styles.css" rel="stylesheet"/>
+<link href="../../styles.css" rel="stylesheet"/>
+<link href="../../styles.css" rel="stylesheet"/>
+<link href="../../styles.css" rel="stylesheet"/>
+<link href="../../styles.css" rel="stylesheet"/>
+<link href="../../styles.css" rel="stylesheet"/>
+<link href="../../styles.css" rel="stylesheet"/>
+<link href="../../styles.css" rel="stylesheet"/>
+<link href="../../styles.css" rel="stylesheet"/>
+<link href="../../styles.css" rel="stylesheet"/>
+<link href="../../styles.css" rel="stylesheet"/>
+<link href="../../styles.css" rel="stylesheet"/>
+<link href="../../styles.css" rel="stylesheet"/>
+<link href="../../styles.css" rel="stylesheet"/>
+<link href="styles.css" rel="stylesheet"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Daily Challenge – Free English Practice | Ovidhan</title>
+<link href="/style.css" rel="stylesheet"/>
+<style>
+        :root {
+            --bg: #0B1F1A;
+            --surface: #122820;
+            --surface2: #1A3530;
+            --border: #1E3D38;
+            --gold: #E6B84A;
+            --gold-dim: rgba(230,184,74,0.12);
+            --teal: #4ECDC4;
+            --green: #4ade80;
+            --red: #f87171;
+            --text: #D8EDEB;
+            --text-mid: #8AADA9;
+            --radius: 12px;
+            --font-bn: 'Hind Siliguri', sans-serif;
+            --font-en: 'Inter', sans-serif;
+        }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: var(--font-bn);
+            line-height: 1.9;
+            min-height: 100vh;
+        }
+        .container { max-width: 800px; margin:0 auto; padding:2rem 1.5rem; }
+        .challenge-header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding: 2rem;
+            background: var(--surface);
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+        }
+        .challenge-header h1 {
+            font-family: var(--font-en);
+            color: var(--gold);
+            font-size: 2.5rem;
+        }
+        .challenge-header p {
+            color: var(--text-mid);
+            margin-top: 0.5rem;
+        }
+        .challenge-header .streak-badge {
+            display: inline-block;
+            background: var(--gold-dim);
+            color: var(--gold);
+            padding: 0.4rem 1.2rem;
+            border-radius: 40px;
+            margin-top: 1rem;
+            font-weight: 600;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 2rem;
+            color: var(--teal);
+            text-decoration: none;
+            font-family: var(--font-en);
+        }
+        .back-link:hover { color: var(--gold); }
+        #test-container { margin-top: 1.5rem; }
+        /* Override test-player styles */
+        .option-btn {
+            display: block;
+            width: 100%;
+            padding: 14px 18px;
+            margin: 8px 0;
+            background: var(--surface);
+            color: var(--text);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            cursor: pointer;
+            text-align: left;
+            font-family: var(--font-bn);
+            font-size: 1rem;
+            transition: all 0.2s;
+        }
+        .option-btn:hover:not(:disabled) {
+            background: var(--surface2);
+            border-color: var(--gold);
+        }
+        .option-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        .feedback {
+            margin-top: 20px;
+            padding: 18px;
+            border-radius: var(--radius);
+        }
+        .correct { background: var(--green); color: #0B1F1A; border-left: 4px solid var(--gold); }
+        .wrong { background: var(--red); color: #0B1F1A; border-left: 4px solid var(--gold); }
+        .next-btn {
+            background: var(--gold);
+            color: var(--bg);
+            padding: 12px 28px;
+            border: none;
+            border-radius: var(--radius);
+            cursor: pointer;
+            font-weight: 700;
+            font-family: var(--font-en);
+            margin-top: 12px;
+            transition: 0.2s;
+        }
+        .next-btn:hover { opacity: 0.85; transform: scale(1.02); }
+        .result-box {
+            text-align: center;
+            padding: 2rem;
+            background: var(--surface);
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+        }
+        .score-display { font-size: 3.5rem; font-weight: 700; color: var(--gold); margin: 1rem 0; }
+        .grade { font-size: 1.5rem; margin-bottom: 1rem; }
+        .learning-links a {
+            color: var(--teal);
+            text-decoration: none;
+            margin-right: 12px;
+            font-weight: 500;
+        }
+        .learning-links a:hover { color: var(--gold); }
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid var(--gold);
+            color: var(--gold);
+            padding: 10px 24px;
+            border-radius: var(--radius);
+            cursor: pointer;
+            font-weight: 700;
+            font-family: var(--font-en);
+            text-decoration: none;
+            display: inline-block;
+            margin: 8px;
+            transition: 0.2s;
+        }
+        .btn-secondary:hover { background: var(--gold); color: var(--bg); }
+    </style>
+<meta content="Practice Daily Challenge with our free English mock test. Perfect for BCS, IELTS, and Bank Jobs preparation. Free for Bangladeshi learners." name="description"/><link href="https://ovidhan.net/mock-tests/daily-challenge.html" hreflang="en" rel="alternate"/><link href="https://ovidhan.net/mock-tests/daily-challenge.html" hreflang="bn" rel="alternate"/><link href="https://ovidhan.net/mock-tests/daily-challenge.html" hreflang="x-default" rel="alternate"/></head>
+<body><header class="site-header">
+<div class="nav-inner">
+<a class="logo" href="/">অভিধান <span>| Ovidhan</span></a>
+<div style="display: flex; align-items: center; gap: 12px;">
+<!-- Play Store Download Button -->
+<a class="nav-cta" href="https://play.google.com/store/apps/details?id=com.ovidhan.dictionary" rel="noopener" style="background: var(--gold); color: #0B1F1A; font-weight: 700; padding: 8px 18px; border-radius: 40px; font-size: 14px; white-space: nowrap; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;" target="_blank">
+                📱 Download App
+            </a>
+<!-- Mobile Toggle Button -->
+<button aria-label="Toggle menu" class="menu-toggle" onclick="toggleMenu()">
+<span></span><span></span><span></span>
+</button>
+</div>
+<ul class="mega-menu" id="megaMenu">
+<li><a href="/">🏠 Home</a></li>
+<li>
+<a href="/learn.html">📚 Learn</a>
+<div class="dropdown">
+<a href="/learn.html#beginner">Beginner (A1)</a>
+<a href="/learn.html#elementary">Elementary (A2)</a>
+<a href="/learn.html#intermediate">Intermediate (B1)</a>
+<a href="/learn.html#upper">Upper-Intermediate (B2)</a>
+<a href="/learn.html#advanced">Advanced (C1)</a>
+<a href="/dashboard.html">📊 Progress</a>
+</div>
+</li>
+<li>
+<a href="/dictionary.html">📖 Dictionary</a>
+<div class="dropdown">
+<a href="/dictionary.html">Search Words</a>
+<a href="/explorer.html">Word Explorer</a>
+<a href="/word-of-the-day.html">Word of the Day</a>
+<a href="/vocabulary-builder.html">Vocabulary Builder</a>
+</div>
+</li>
+<li>
+<a href="/grammar.html">📝 Grammar</a>
+<div class="dropdown">
+<a href="/grammar.html#beginner">Beginner Grammar</a>
+<a href="/grammar.html#intermediate">Intermediate Grammar</a>
+<a href="/grammar.html#advanced">Advanced Grammar</a>
+<a href="/grammar-quiz.html">Grammar Quiz</a>
+<a href="/grammar-checker.html">Grammar Checker</a>
+</div>
+</li>
+<li>
+<a href="/speaking.html">🗣 Speaking</a>
+<div class="dropdown">
+<a href="/speaking.html#daily">Daily Conversation</a>
+<a href="/speaking.html#travel">Travel English</a>
+<a href="/speaking.html#office">Office English</a>
+<a href="/speaking.html#interview">Job Interview</a>
+<a href="/speaking-practice.html">Speaking Practice</a>
+</div>
+</li>
+<li>
+<a href="/listening.html">🎧 Listening</a>
+<div class="dropdown">
+<a href="/listening.html#lessons">All Listening Exercises</a>
+<a href="/listening.html">Daily English</a>
+<a href="/listening.html">Travel English</a>
+<a href="/listening.html">Workplace English</a>
+<a href="/listening.html">Academic English</a>
+<a href="/listening.html">IELTS Listening</a>
+</div>
+</li>
+<li>
+<a href="/writing.html">✍ Writing</a>
+<div class="dropdown">
+<a href="/writing.html#academic">Academic Writing</a>
+<a href="/writing.html#business">Business English</a>
+<a href="/writing.html#daily">Daily Writing</a>
+<a href="/sentence-analyzer.html">Sentence Analyzer</a>
+<a href="/grammar-checker.html">Grammar Checker</a>
+</div>
+</li>
+<li>
+<a href="/practice.html">🎯 Practice</a>
+<div class="dropdown">
+<a href="/mock-tests/daily-challenge.html">Daily Challenge</a>
+<a href="/flashcards.html">Flashcards</a>
+<a href="/vocabulary-quiz.html">Vocabulary Quiz</a>
+<a href="/grammar-quiz.html">Grammar Quiz</a>
+<a href="/speaking-practice.html">Speaking Practice</a>
+</div>
+</li>
+<li>
+<a href="/assessment.html">🧪 Assessment</a>
+<div class="dropdown">
+<a href="/english-level-test.html">CEFR Level Test</a>
+<a href="/grammar-level-test.html">Grammar Test</a>
+<a href="/vocabulary-size-test.html">Vocabulary Size</a>
+<a href="/assessment.html#report">Progress Report</a>
+</div>
+</li>
+<li>
+<a href="/exam-prep.html">🎓 Exam Prep</a>
+<div class="dropdown">
+<a href="/ielts-guide.html">IELTS</a>
+<a href="/bcs-english-mock-test.html">BCS</a>
+<a href="/bank-job-english-preparation-guide.html">Bank Jobs</a>
+<a href="/exam-prep.html#ssc">SSC / HSC</a>
+<a href="/exam-prep.html#university">University Admission</a>
+</div>
+</li>
+<li>
+<a href="/tools.html">🛠 Tools</a>
+<div class="dropdown">
+<a href="/sentence-analyzer.html">Sentence Analyzer</a>
+<a href="/tense-identifier.html">Tense Identifier</a>
+<a href="/voice-converter.html">Voice Converter</a>
+<a href="/plural-maker.html">Plural Maker</a>
+<a href="/verb-forms.html">Verb Forms</a>
+</div>
+</li>
+<li>
+<a href="/bangladesh.html">🇧🇩 Bangladesh</a>
+<div class="dropdown">
+<a href="/bangladesh.html#visa">Visa &amp; Immigration</a>
+<a href="/bangladesh.html#job">Job Interview</a>
+<a href="/bangladesh.html#daily">Daily Life English</a>
+<a href="/bangladesh.html#mistakes">Common Bangla Mistakes</a>
+</div>
+</li>
+<li><a href="/blog.html">📰 Blog</a></li>
+</ul>
+</div>
+</header>
+<!-- ═══ MOBILE MENU TOGGLE SCRIPT ═══ -->
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('megaMenu');
+        const toggle = document.querySelector('.menu-toggle');
+        menu.classList.toggle('open');
+        toggle.classList.toggle('active');
+    }
+
+    // Close menu when a link is clicked (better UX)
+    document.addEventListener('DOMContentLoaded', function() {
+        const links = document.querySelectorAll('.mega-menu a');
+        links.forEach(link => {
+            link.addEventListener('click', function() {
+                const menu = document.getElementById('megaMenu');
+                const toggle = document.querySelector('.menu-toggle');
+                if (menu.classList.contains('open')) {
+                    menu.classList.remove('open');
+                    toggle.classList.remove('active');
+                }
+            });
+        });
+    });
+</script>
+<!-- ═══ MOBILE MENU STYLES (if not already in style.css) ═══ -->
+<style>
+    /* Ensure these styles are also in style.css, but include here as fallback */
+    .menu-toggle {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+        z-index: 101;
+    }
+    .menu-toggle span {
+        display: block;
+        width: 28px;
+        height: 3px;
+        background: var(--text);
+        border-radius: 3px;
+        transition: 0.3s;
+    }
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    @media (max-width: 900px) {
+        .menu-toggle {
+            display: flex;
+        }
+        .mega-menu {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            padding: 1rem 0;
+            background: var(--bg);
+            border-top: 1px solid var(--border);
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        .mega-menu.open {
+            display: flex;
+        }
+        .mega-menu li {
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+        }
+        .mega-menu li:last-child {
+            border-bottom: none;
+        }
+        .mega-menu li .dropdown {
+            display: none;
+            background: var(--surface2);
+            padding: 0.5rem 0;
+        }
+        .mega-menu li .dropdown a {
+            padding: 0.5rem 1rem;
+            display: block;
+            font-size: 0.9rem;
+        }
+        .mega-menu li:hover .dropdown {
+            display: none; /* prevent hover on mobile */
+        }
+        /* On mobile, show dropdown when parent is clicked? */
+        /* For simplicity, we keep dropdown items visible on mobile? We'll rely on the parent link. */
+        /* Better: on mobile, dropdown items can be shown as submenu items without dropdown. */
+        .mega-menu li a {
+            padding: 12px 0;
+            display: block;
+            width: 100%;
+        }
+        .nav-inner {
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-size: 1.2rem;
+        }
+        .nav-cta {
+            font-size: 12px !important;
+            padding: 6px 12px !important;
+        }
+    }
+</style>
+<!-- ═══ MOBILE MENU TOGGLE SCRIPT ═══ -->
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('megaMenu');
+        const toggle = document.querySelector('.menu-toggle');
+        menu.classList.toggle('open');
+        toggle.classList.toggle('active');
+    }
+
+    // Close menu when a link is clicked (better UX)
+    document.addEventListener('DOMContentLoaded', function() {
+        const links = document.querySelectorAll('.mega-menu a');
+        links.forEach(link => {
+            link.addEventListener('click', function() {
+                const menu = document.getElementById('megaMenu');
+                const toggle = document.querySelector('.menu-toggle');
+                if (menu.classList.contains('open')) {
+                    menu.classList.remove('open');
+                    toggle.classList.remove('active');
+                }
+            });
+        });
+    });
+</script>
+<!-- ═══ MOBILE MENU STYLES (if not already in style.css) ═══ -->
+<style>
+    /* Ensure these styles are also in style.css, but include here as fallback */
+    .menu-toggle {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+        z-index: 101;
+    }
+    .menu-toggle span {
+        display: block;
+        width: 28px;
+        height: 3px;
+        background: var(--text);
+        border-radius: 3px;
+        transition: 0.3s;
+    }
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    @media (max-width: 900px) {
+        .menu-toggle {
+            display: flex;
+        }
+        .mega-menu {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            padding: 1rem 0;
+            background: var(--bg);
+            border-top: 1px solid var(--border);
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        .mega-menu.open {
+            display: flex;
+        }
+        .mega-menu li {
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+        }
+        .mega-menu li:last-child {
+            border-bottom: none;
+        }
+        .mega-menu li .dropdown {
+            display: none;
+            background: var(--surface2);
+            padding: 0.5rem 0;
+        }
+        .mega-menu li .dropdown a {
+            padding: 0.5rem 1rem;
+            display: block;
+            font-size: 0.9rem;
+        }
+        .mega-menu li:hover .dropdown {
+            display: none; /* prevent hover on mobile */
+        }
+        /* On mobile, show dropdown when parent is clicked? */
+        /* For simplicity, we keep dropdown items visible on mobile? We'll rely on the parent link. */
+        /* Better: on mobile, dropdown items can be shown as submenu items without dropdown. */
+        .mega-menu li a {
+            padding: 12px 0;
+            display: block;
+            width: 100%;
+        }
+        .nav-inner {
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-size: 1.2rem;
+        }
+        .nav-cta {
+            font-size: 12px !important;
+            padding: 6px 12px !important;
+        }
+    }
+</style>
+<!-- ═══ MOBILE MENU TOGGLE SCRIPT ═══ -->
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('megaMenu');
+        const toggle = document.querySelector('.menu-toggle');
+        menu.classList.toggle('open');
+        toggle.classList.toggle('active');
+    }
+
+    // Close menu when a link is clicked (better UX)
+    document.addEventListener('DOMContentLoaded', function() {
+        const links = document.querySelectorAll('.mega-menu a');
+        links.forEach(link => {
+            link.addEventListener('click', function() {
+                const menu = document.getElementById('megaMenu');
+                const toggle = document.querySelector('.menu-toggle');
+                if (menu.classList.contains('open')) {
+                    menu.classList.remove('open');
+                    toggle.classList.remove('active');
+                }
+            });
+        });
+    });
+</script>
+<!-- ═══ MOBILE MENU STYLES (if not already in style.css) ═══ -->
+<style>
+    /* Ensure these styles are also in style.css, but include here as fallback */
+    .menu-toggle {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+        z-index: 101;
+    }
+    .menu-toggle span {
+        display: block;
+        width: 28px;
+        height: 3px;
+        background: var(--text);
+        border-radius: 3px;
+        transition: 0.3s;
+    }
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    @media (max-width: 900px) {
+        .menu-toggle {
+            display: flex;
+        }
+        .mega-menu {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            padding: 1rem 0;
+            background: var(--bg);
+            border-top: 1px solid var(--border);
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        .mega-menu.open {
+            display: flex;
+        }
+        .mega-menu li {
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+        }
+        .mega-menu li:last-child {
+            border-bottom: none;
+        }
+        .mega-menu li .dropdown {
+            display: none;
+            background: var(--surface2);
+            padding: 0.5rem 0;
+        }
+        .mega-menu li .dropdown a {
+            padding: 0.5rem 1rem;
+            display: block;
+            font-size: 0.9rem;
+        }
+        .mega-menu li:hover .dropdown {
+            display: none; /* prevent hover on mobile */
+        }
+        /* On mobile, show dropdown when parent is clicked? */
+        /* For simplicity, we keep dropdown items visible on mobile? We'll rely on the parent link. */
+        /* Better: on mobile, dropdown items can be shown as submenu items without dropdown. */
+        .mega-menu li a {
+            padding: 12px 0;
+            display: block;
+            width: 100%;
+        }
+        .nav-inner {
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-size: 1.2rem;
+        }
+        .nav-cta {
+            font-size: 12px !important;
+            padding: 6px 12px !important;
+        }
+    }
+</style>
+<!-- ═══ MOBILE MENU TOGGLE SCRIPT ═══ -->
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('megaMenu');
+        const toggle = document.querySelector('.menu-toggle');
+        menu.classList.toggle('open');
+        toggle.classList.toggle('active');
+    }
+
+    // Close menu when a link is clicked (better UX)
+    document.addEventListener('DOMContentLoaded', function() {
+        const links = document.querySelectorAll('.mega-menu a');
+        links.forEach(link => {
+            link.addEventListener('click', function() {
+                const menu = document.getElementById('megaMenu');
+                const toggle = document.querySelector('.menu-toggle');
+                if (menu.classList.contains('open')) {
+                    menu.classList.remove('open');
+                    toggle.classList.remove('active');
+                }
+            });
+        });
+    });
+</script>
+<!-- ═══ MOBILE MENU STYLES (if not already in style.css) ═══ -->
+<style>
+    /* Ensure these styles are also in style.css, but include here as fallback */
+    .menu-toggle {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+        z-index: 101;
+    }
+    .menu-toggle span {
+        display: block;
+        width: 28px;
+        height: 3px;
+        background: var(--text);
+        border-radius: 3px;
+        transition: 0.3s;
+    }
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    @media (max-width: 900px) {
+        .menu-toggle {
+            display: flex;
+        }
+        .mega-menu {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            padding: 1rem 0;
+            background: var(--bg);
+            border-top: 1px solid var(--border);
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        .mega-menu.open {
+            display: flex;
+        }
+        .mega-menu li {
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+        }
+        .mega-menu li:last-child {
+            border-bottom: none;
+        }
+        .mega-menu li .dropdown {
+            display: none;
+            background: var(--surface2);
+            padding: 0.5rem 0;
+        }
+        .mega-menu li .dropdown a {
+            padding: 0.5rem 1rem;
+            display: block;
+            font-size: 0.9rem;
+        }
+        .mega-menu li:hover .dropdown {
+            display: none; /* prevent hover on mobile */
+        }
+        /* On mobile, show dropdown when parent is clicked? */
+        /* For simplicity, we keep dropdown items visible on mobile? We'll rely on the parent link. */
+        /* Better: on mobile, dropdown items can be shown as submenu items without dropdown. */
+        .mega-menu li a {
+            padding: 12px 0;
+            display: block;
+            width: 100%;
+        }
+        .nav-inner {
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-size: 1.2rem;
+        }
+        .nav-cta {
+            font-size: 12px !important;
+            padding: 6px 12px !important;
+        }
+    }
+</style>
+<!-- ═══ MOBILE MENU TOGGLE SCRIPT ═══ -->
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('megaMenu');
+        const toggle = document.querySelector('.menu-toggle');
+        menu.classList.toggle('open');
+        toggle.classList.toggle('active');
+    }
+
+    // Close menu when a link is clicked (better UX)
+    document.addEventListener('DOMContentLoaded', function() {
+        const links = document.querySelectorAll('.mega-menu a');
+        links.forEach(link => {
+            link.addEventListener('click', function() {
+                const menu = document.getElementById('megaMenu');
+                const toggle = document.querySelector('.menu-toggle');
+                if (menu.classList.contains('open')) {
+                    menu.classList.remove('open');
+                    toggle.classList.remove('active');
+                }
+            });
+        });
+    });
+</script>
+<!-- ═══ MOBILE MENU STYLES (if not already in style.css) ═══ -->
+<style>
+    /* Ensure these styles are also in style.css, but include here as fallback */
+    .menu-toggle {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+        z-index: 101;
+    }
+    .menu-toggle span {
+        display: block;
+        width: 28px;
+        height: 3px;
+        background: var(--text);
+        border-radius: 3px;
+        transition: 0.3s;
+    }
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    @media (max-width: 900px) {
+        .menu-toggle {
+            display: flex;
+        }
+        .mega-menu {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            padding: 1rem 0;
+            background: var(--bg);
+            border-top: 1px solid var(--border);
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        .mega-menu.open {
+            display: flex;
+        }
+        .mega-menu li {
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+        }
+        .mega-menu li:last-child {
+            border-bottom: none;
+        }
+        .mega-menu li .dropdown {
+            display: none;
+            background: var(--surface2);
+            padding: 0.5rem 0;
+        }
+        .mega-menu li .dropdown a {
+            padding: 0.5rem 1rem;
+            display: block;
+            font-size: 0.9rem;
+        }
+        .mega-menu li:hover .dropdown {
+            display: none; /* prevent hover on mobile */
+        }
+        /* On mobile, show dropdown when parent is clicked? */
+        /* For simplicity, we keep dropdown items visible on mobile? We'll rely on the parent link. */
+        /* Better: on mobile, dropdown items can be shown as submenu items without dropdown. */
+        .mega-menu li a {
+            padding: 12px 0;
+            display: block;
+            width: 100%;
+        }
+        .nav-inner {
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-size: 1.2rem;
+        }
+        .nav-cta {
+            font-size: 12px !important;
+            padding: 6px 12px !important;
+        }
+    }
+</style>
+<!-- ═══ MOBILE MENU TOGGLE SCRIPT ═══ -->
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('megaMenu');
+        const toggle = document.querySelector('.menu-toggle');
+        menu.classList.toggle('open');
+        toggle.classList.toggle('active');
+    }
+
+    // Close menu when a link is clicked (better UX)
+    document.addEventListener('DOMContentLoaded', function() {
+        const links = document.querySelectorAll('.mega-menu a');
+        links.forEach(link => {
+            link.addEventListener('click', function() {
+                const menu = document.getElementById('megaMenu');
+                const toggle = document.querySelector('.menu-toggle');
+                if (menu.classList.contains('open')) {
+                    menu.classList.remove('open');
+                    toggle.classList.remove('active');
+                }
+            });
+        });
+    });
+</script>
+<!-- ═══ MOBILE MENU STYLES (if not already in style.css) ═══ -->
+<style>
+    /* Ensure these styles are also in style.css, but include here as fallback */
+    .menu-toggle {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+        z-index: 101;
+    }
+    .menu-toggle span {
+        display: block;
+        width: 28px;
+        height: 3px;
+        background: var(--text);
+        border-radius: 3px;
+        transition: 0.3s;
+    }
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    @media (max-width: 900px) {
+        .menu-toggle {
+            display: flex;
+        }
+        .mega-menu {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            padding: 1rem 0;
+            background: var(--bg);
+            border-top: 1px solid var(--border);
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        .mega-menu.open {
+            display: flex;
+        }
+        .mega-menu li {
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+        }
+        .mega-menu li:last-child {
+            border-bottom: none;
+        }
+        .mega-menu li .dropdown {
+            display: none;
+            background: var(--surface2);
+            padding: 0.5rem 0;
+        }
+        .mega-menu li .dropdown a {
+            padding: 0.5rem 1rem;
+            display: block;
+            font-size: 0.9rem;
+        }
+        .mega-menu li:hover .dropdown {
+            display: none; /* prevent hover on mobile */
+        }
+        /* On mobile, show dropdown when parent is clicked? */
+        /* For simplicity, we keep dropdown items visible on mobile? We'll rely on the parent link. */
+        /* Better: on mobile, dropdown items can be shown as submenu items without dropdown. */
+        .mega-menu li a {
+            padding: 12px 0;
+            display: block;
+            width: 100%;
+        }
+        .nav-inner {
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-size: 1.2rem;
+        }
+        .nav-cta {
+            font-size: 12px !important;
+            padding: 6px 12px !important;
+        }
+    }
+</style>
+<!-- ═══ MOBILE MENU TOGGLE SCRIPT ═══ -->
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('megaMenu');
+        const toggle = document.querySelector('.menu-toggle');
+        menu.classList.toggle('open');
+        toggle.classList.toggle('active');
+    }
+
+    // Close menu when a link is clicked (better UX)
+    document.addEventListener('DOMContentLoaded', function() {
+        const links = document.querySelectorAll('.mega-menu a');
+        links.forEach(link => {
+            link.addEventListener('click', function() {
+                const menu = document.getElementById('megaMenu');
+                const toggle = document.querySelector('.menu-toggle');
+                if (menu.classList.contains('open')) {
+                    menu.classList.remove('open');
+                    toggle.classList.remove('active');
+                }
+            });
+        });
+    });
+</script>
+<!-- ═══ MOBILE MENU STYLES (if not already in style.css) ═══ -->
+<style>
+    /* Ensure these styles are also in style.css, but include here as fallback */
+    .menu-toggle {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+        z-index: 101;
+    }
+    .menu-toggle span {
+        display: block;
+        width: 28px;
+        height: 3px;
+        background: var(--text);
+        border-radius: 3px;
+        transition: 0.3s;
+    }
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    @media (max-width: 900px) {
+        .menu-toggle {
+            display: flex;
+        }
+        .mega-menu {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            padding: 1rem 0;
+            background: var(--bg);
+            border-top: 1px solid var(--border);
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        .mega-menu.open {
+            display: flex;
+        }
+        .mega-menu li {
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+        }
+        .mega-menu li:last-child {
+            border-bottom: none;
+        }
+        .mega-menu li .dropdown {
+            display: none;
+            background: var(--surface2);
+            padding: 0.5rem 0;
+        }
+        .mega-menu li .dropdown a {
+            padding: 0.5rem 1rem;
+            display: block;
+            font-size: 0.9rem;
+        }
+        .mega-menu li:hover .dropdown {
+            display: none; /* prevent hover on mobile */
+        }
+        /* On mobile, show dropdown when parent is clicked? */
+        /* For simplicity, we keep dropdown items visible on mobile? We'll rely on the parent link. */
+        /* Better: on mobile, dropdown items can be shown as submenu items without dropdown. */
+        .mega-menu li a {
+            padding: 12px 0;
+            display: block;
+            width: 100%;
+        }
+        .nav-inner {
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-size: 1.2rem;
+        }
+        .nav-cta {
+            font-size: 12px !important;
+            padding: 6px 12px !important;
+        }
+    }
+</style>
+<!-- ═══ MOBILE MENU TOGGLE SCRIPT ═══ -->
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('megaMenu');
+        const toggle = document.querySelector('.menu-toggle');
+        menu.classList.toggle('open');
+        toggle.classList.toggle('active');
+    }
+
+    // Close menu when a link is clicked (better UX)
+    document.addEventListener('DOMContentLoaded', function() {
+        const links = document.querySelectorAll('.mega-menu a');
+        links.forEach(link => {
+            link.addEventListener('click', function() {
+                const menu = document.getElementById('megaMenu');
+                const toggle = document.querySelector('.menu-toggle');
+                if (menu.classList.contains('open')) {
+                    menu.classList.remove('open');
+                    toggle.classList.remove('active');
+                }
+            });
+        });
+    });
+</script>
+<!-- ═══ MOBILE MENU STYLES (if not already in style.css) ═══ -->
+<style>
+    /* Ensure these styles are also in style.css, but include here as fallback */
+    .menu-toggle {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+        z-index: 101;
+    }
+    .menu-toggle span {
+        display: block;
+        width: 28px;
+        height: 3px;
+        background: var(--text);
+        border-radius: 3px;
+        transition: 0.3s;
+    }
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    @media (max-width: 900px) {
+        .menu-toggle {
+            display: flex;
+        }
+        .mega-menu {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            padding: 1rem 0;
+            background: var(--bg);
+            border-top: 1px solid var(--border);
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        .mega-menu.open {
+            display: flex;
+        }
+        .mega-menu li {
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+        }
+        .mega-menu li:last-child {
+            border-bottom: none;
+        }
+        .mega-menu li .dropdown {
+            display: none;
+            background: var(--surface2);
+            padding: 0.5rem 0;
+        }
+        .mega-menu li .dropdown a {
+            padding: 0.5rem 1rem;
+            display: block;
+            font-size: 0.9rem;
+        }
+        .mega-menu li:hover .dropdown {
+            display: none; /* prevent hover on mobile */
+        }
+        /* On mobile, show dropdown when parent is clicked? */
+        /* For simplicity, we keep dropdown items visible on mobile? We'll rely on the parent link. */
+        /* Better: on mobile, dropdown items can be shown as submenu items without dropdown. */
+        .mega-menu li a {
+            padding: 12px 0;
+            display: block;
+            width: 100%;
+        }
+        .nav-inner {
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-size: 1.2rem;
+        }
+        .nav-cta {
+            font-size: 12px !important;
+            padding: 6px 12px !important;
+        }
+    }
+</style>
+<!-- ═══ MOBILE MENU TOGGLE SCRIPT ═══ -->
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('megaMenu');
+        const toggle = document.querySelector('.menu-toggle');
+        menu.classList.toggle('open');
+        toggle.classList.toggle('active');
+    }
+
+    // Close menu when a link is clicked (better UX)
+    document.addEventListener('DOMContentLoaded', function() {
+        const links = document.querySelectorAll('.mega-menu a');
+        links.forEach(link => {
+            link.addEventListener('click', function() {
+                const menu = document.getElementById('megaMenu');
+                const toggle = document.querySelector('.menu-toggle');
+                if (menu.classList.contains('open')) {
+                    menu.classList.remove('open');
+                    toggle.classList.remove('active');
+                }
+            });
+        });
+    });
+</script>
+<!-- ═══ MOBILE MENU STYLES (if not already in style.css) ═══ -->
+<style>
+    /* Ensure these styles are also in style.css, but include here as fallback */
+    .menu-toggle {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+        z-index: 101;
+    }
+    .menu-toggle span {
+        display: block;
+        width: 28px;
+        height: 3px;
+        background: var(--text);
+        border-radius: 3px;
+        transition: 0.3s;
+    }
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    @media (max-width: 900px) {
+        .menu-toggle {
+            display: flex;
+        }
+        .mega-menu {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            padding: 1rem 0;
+            background: var(--bg);
+            border-top: 1px solid var(--border);
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        .mega-menu.open {
+            display: flex;
+        }
+        .mega-menu li {
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+        }
+        .mega-menu li:last-child {
+            border-bottom: none;
+        }
+        .mega-menu li .dropdown {
+            display: none;
+            background: var(--surface2);
+            padding: 0.5rem 0;
+        }
+        .mega-menu li .dropdown a {
+            padding: 0.5rem 1rem;
+            display: block;
+            font-size: 0.9rem;
+        }
+        .mega-menu li:hover .dropdown {
+            display: none; /* prevent hover on mobile */
+        }
+        /* On mobile, show dropdown when parent is clicked? */
+        /* For simplicity, we keep dropdown items visible on mobile? We'll rely on the parent link. */
+        /* Better: on mobile, dropdown items can be shown as submenu items without dropdown. */
+        .mega-menu li a {
+            padding: 12px 0;
+            display: block;
+            width: 100%;
+        }
+        .nav-inner {
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-size: 1.2rem;
+        }
+        .nav-cta {
+            font-size: 12px !important;
+            padding: 6px 12px !important;
+        }
+    }
+</style>
+<!-- ═══ MOBILE MENU TOGGLE SCRIPT ═══ -->
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('megaMenu');
+        const toggle = document.querySelector('.menu-toggle');
+        menu.classList.toggle('open');
+        toggle.classList.toggle('active');
+    }
+
+    // Close menu when a link is clicked (better UX)
+    document.addEventListener('DOMContentLoaded', function() {
+        const links = document.querySelectorAll('.mega-menu a');
+        links.forEach(link => {
+            link.addEventListener('click', function() {
+                const menu = document.getElementById('megaMenu');
+                const toggle = document.querySelector('.menu-toggle');
+                if (menu.classList.contains('open')) {
+                    menu.classList.remove('open');
+                    toggle.classList.remove('active');
+                }
+            });
+        });
+    });
+</script>
+<!-- ═══ MOBILE MENU STYLES (if not already in style.css) ═══ -->
+<style>
+    /* Ensure these styles are also in style.css, but include here as fallback */
+    .menu-toggle {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+        z-index: 101;
+    }
+    .menu-toggle span {
+        display: block;
+        width: 28px;
+        height: 3px;
+        background: var(--text);
+        border-radius: 3px;
+        transition: 0.3s;
+    }
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    @media (max-width: 900px) {
+        .menu-toggle {
+            display: flex;
+        }
+        .mega-menu {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            padding: 1rem 0;
+            background: var(--bg);
+            border-top: 1px solid var(--border);
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        .mega-menu.open {
+            display: flex;
+        }
+        .mega-menu li {
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+        }
+        .mega-menu li:last-child {
+            border-bottom: none;
+        }
+        .mega-menu li .dropdown {
+            display: none;
+            background: var(--surface2);
+            padding: 0.5rem 0;
+        }
+        .mega-menu li .dropdown a {
+            padding: 0.5rem 1rem;
+            display: block;
+            font-size: 0.9rem;
+        }
+        .mega-menu li:hover .dropdown {
+            display: none; /* prevent hover on mobile */
+        }
+        /* On mobile, show dropdown when parent is clicked? */
+        /* For simplicity, we keep dropdown items visible on mobile? We'll rely on the parent link. */
+        /* Better: on mobile, dropdown items can be shown as submenu items without dropdown. */
+        .mega-menu li a {
+            padding: 12px 0;
+            display: block;
+            width: 100%;
+        }
+        .nav-inner {
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-size: 1.2rem;
+        }
+        .nav-cta {
+            font-size: 12px !important;
+            padding: 6px 12px !important;
+        }
+    }
+</style>
+<!-- ═══ MOBILE MENU TOGGLE SCRIPT ═══ -->
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('megaMenu');
+        const toggle = document.querySelector('.menu-toggle');
+        menu.classList.toggle('open');
+        toggle.classList.toggle('active');
+    }
+
+    // Close menu when a link is clicked (better UX)
+    document.addEventListener('DOMContentLoaded', function() {
+        const links = document.querySelectorAll('.mega-menu a');
+        links.forEach(link => {
+            link.addEventListener('click', function() {
+                const menu = document.getElementById('megaMenu');
+                const toggle = document.querySelector('.menu-toggle');
+                if (menu.classList.contains('open')) {
+                    menu.classList.remove('open');
+                    toggle.classList.remove('active');
+                }
+            });
+        });
+    });
+</script>
+<!-- ═══ MOBILE MENU STYLES (if not already in style.css) ═══ -->
+<style>
+    /* Ensure these styles are also in style.css, but include here as fallback */
+    .menu-toggle {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+        z-index: 101;
+    }
+    .menu-toggle span {
+        display: block;
+        width: 28px;
+        height: 3px;
+        background: var(--text);
+        border-radius: 3px;
+        transition: 0.3s;
+    }
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    @media (max-width: 900px) {
+        .menu-toggle {
+            display: flex;
+        }
+        .mega-menu {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            padding: 1rem 0;
+            background: var(--bg);
+            border-top: 1px solid var(--border);
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        .mega-menu.open {
+            display: flex;
+        }
+        .mega-menu li {
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+        }
+        .mega-menu li:last-child {
+            border-bottom: none;
+        }
+        .mega-menu li .dropdown {
+            display: none;
+            background: var(--surface2);
+            padding: 0.5rem 0;
+        }
+        .mega-menu li .dropdown a {
+            padding: 0.5rem 1rem;
+            display: block;
+            font-size: 0.9rem;
+        }
+        .mega-menu li:hover .dropdown {
+            display: none; /* prevent hover on mobile */
+        }
+        /* On mobile, show dropdown when parent is clicked? */
+        /* For simplicity, we keep dropdown items visible on mobile? We'll rely on the parent link. */
+        /* Better: on mobile, dropdown items can be shown as submenu items without dropdown. */
+        .mega-menu li a {
+            padding: 12px 0;
+            display: block;
+            width: 100%;
+        }
+        .nav-inner {
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-size: 1.2rem;
+        }
+        .nav-cta {
+            font-size: 12px !important;
+            padding: 6px 12px !important;
+        }
+    }
+</style>
+<!-- ═══ MOBILE MENU TOGGLE SCRIPT ═══ -->
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('megaMenu');
+        const toggle = document.querySelector('.menu-toggle');
+        menu.classList.toggle('open');
+        toggle.classList.toggle('active');
+    }
+
+    // Close menu when a link is clicked (better UX)
+    document.addEventListener('DOMContentLoaded', function() {
+        const links = document.querySelectorAll('.mega-menu a');
+        links.forEach(link => {
+            link.addEventListener('click', function() {
+                const menu = document.getElementById('megaMenu');
+                const toggle = document.querySelector('.menu-toggle');
+                if (menu.classList.contains('open')) {
+                    menu.classList.remove('open');
+                    toggle.classList.remove('active');
+                }
+            });
+        });
+    });
+</script>
+<!-- ═══ MOBILE MENU STYLES (if not already in style.css) ═══ -->
+<style>
+    /* Ensure these styles are also in style.css, but include here as fallback */
+    .menu-toggle {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+        z-index: 101;
+    }
+    .menu-toggle span {
+        display: block;
+        width: 28px;
+        height: 3px;
+        background: var(--text);
+        border-radius: 3px;
+        transition: 0.3s;
+    }
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    @media (max-width: 900px) {
+        .menu-toggle {
+            display: flex;
+        }
+        .mega-menu {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            padding: 1rem 0;
+            background: var(--bg);
+            border-top: 1px solid var(--border);
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        .mega-menu.open {
+            display: flex;
+        }
+        .mega-menu li {
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+        }
+        .mega-menu li:last-child {
+            border-bottom: none;
+        }
+        .mega-menu li .dropdown {
+            display: none;
+            background: var(--surface2);
+            padding: 0.5rem 0;
+        }
+        .mega-menu li .dropdown a {
+            padding: 0.5rem 1rem;
+            display: block;
+            font-size: 0.9rem;
+        }
+        .mega-menu li:hover .dropdown {
+            display: none; /* prevent hover on mobile */
+        }
+        /* On mobile, show dropdown when parent is clicked? */
+        /* For simplicity, we keep dropdown items visible on mobile? We'll rely on the parent link. */
+        /* Better: on mobile, dropdown items can be shown as submenu items without dropdown. */
+        .mega-menu li a {
+            padding: 12px 0;
+            display: block;
+            width: 100%;
+        }
+        .nav-inner {
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-size: 1.2rem;
+        }
+        .nav-cta {
+            font-size: 12px !important;
+            padding: 6px 12px !important;
+        }
+    }
+</style>
+<!-- ═══ MOBILE MENU TOGGLE SCRIPT ═══ -->
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('megaMenu');
+        const toggle = document.querySelector('.menu-toggle');
+        menu.classList.toggle('open');
+        toggle.classList.toggle('active');
+    }
+
+    // Close menu when a link is clicked (better UX)
+    document.addEventListener('DOMContentLoaded', function() {
+        const links = document.querySelectorAll('.mega-menu a');
+        links.forEach(link => {
+            link.addEventListener('click', function() {
+                const menu = document.getElementById('megaMenu');
+                const toggle = document.querySelector('.menu-toggle');
+                if (menu.classList.contains('open')) {
+                    menu.classList.remove('open');
+                    toggle.classList.remove('active');
+                }
+            });
+        });
+    });
+</script>
+<!-- ═══ MOBILE MENU STYLES (if not already in style.css) ═══ -->
+<style>
+    /* Ensure these styles are also in style.css, but include here as fallback */
+    .menu-toggle {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+        z-index: 101;
+    }
+    .menu-toggle span {
+        display: block;
+        width: 28px;
+        height: 3px;
+        background: var(--text);
+        border-radius: 3px;
+        transition: 0.3s;
+    }
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    @media (max-width: 900px) {
+        .menu-toggle {
+            display: flex;
+        }
+        .mega-menu {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            padding: 1rem 0;
+            background: var(--bg);
+            border-top: 1px solid var(--border);
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        .mega-menu.open {
+            display: flex;
+        }
+        .mega-menu li {
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+        }
+        .mega-menu li:last-child {
+            border-bottom: none;
+        }
+        .mega-menu li .dropdown {
+            display: none;
+            background: var(--surface2);
+            padding: 0.5rem 0;
+        }
+        .mega-menu li .dropdown a {
+            padding: 0.5rem 1rem;
+            display: block;
+            font-size: 0.9rem;
+        }
+        .mega-menu li:hover .dropdown {
+            display: none; /* prevent hover on mobile */
+        }
+        /* On mobile, show dropdown when parent is clicked? */
+        /* For simplicity, we keep dropdown items visible on mobile? We'll rely on the parent link. */
+        /* Better: on mobile, dropdown items can be shown as submenu items without dropdown. */
+        .mega-menu li a {
+            padding: 12px 0;
+            display: block;
+            width: 100%;
+        }
+        .nav-inner {
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-size: 1.2rem;
+        }
+        .nav-cta {
+            font-size: 12px !important;
+            padding: 6px 12px !important;
+        }
+    }
+</style>
+<!-- ═══ MOBILE MENU TOGGLE SCRIPT ═══ -->
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('megaMenu');
+        const toggle = document.querySelector('.menu-toggle');
+        menu.classList.toggle('open');
+        toggle.classList.toggle('active');
+    }
+
+    // Close menu when a link is clicked (better UX)
+    document.addEventListener('DOMContentLoaded', function() {
+        const links = document.querySelectorAll('.mega-menu a');
+        links.forEach(link => {
+            link.addEventListener('click', function() {
+                const menu = document.getElementById('megaMenu');
+                const toggle = document.querySelector('.menu-toggle');
+                if (menu.classList.contains('open')) {
+                    menu.classList.remove('open');
+                    toggle.classList.remove('active');
+                }
+            });
+        });
+    });
+</script>
+<!-- ═══ MOBILE MENU STYLES (if not already in style.css) ═══ -->
+<style>
+    /* Ensure these styles are also in style.css, but include here as fallback */
+    .menu-toggle {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+        z-index: 101;
+    }
+    .menu-toggle span {
+        display: block;
+        width: 28px;
+        height: 3px;
+        background: var(--text);
+        border-radius: 3px;
+        transition: 0.3s;
+    }
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    @media (max-width: 900px) {
+        .menu-toggle {
+            display: flex;
+        }
+        .mega-menu {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            padding: 1rem 0;
+            background: var(--bg);
+            border-top: 1px solid var(--border);
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        .mega-menu.open {
+            display: flex;
+        }
+        .mega-menu li {
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+        }
+        .mega-menu li:last-child {
+            border-bottom: none;
+        }
+        .mega-menu li .dropdown {
+            display: none;
+            background: var(--surface2);
+            padding: 0.5rem 0;
+        }
+        .mega-menu li .dropdown a {
+            padding: 0.5rem 1rem;
+            display: block;
+            font-size: 0.9rem;
+        }
+        .mega-menu li:hover .dropdown {
+            display: none; /* prevent hover on mobile */
+        }
+        /* On mobile, show dropdown when parent is clicked? */
+        /* For simplicity, we keep dropdown items visible on mobile? We'll rely on the parent link. */
+        /* Better: on mobile, dropdown items can be shown as submenu items without dropdown. */
+        .mega-menu li a {
+            padding: 12px 0;
+            display: block;
+            width: 100%;
+        }
+        .nav-inner {
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-size: 1.2rem;
+        }
+        .nav-cta {
+            font-size: 12px !important;
+            padding: 6px 12px !important;
+        }
+    }
+</style>
+<!-- ═══ MOBILE MENU TOGGLE SCRIPT ═══ -->
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('megaMenu');
+        const toggle = document.querySelector('.menu-toggle');
+        menu.classList.toggle('open');
+        toggle.classList.toggle('active');
+    }
+
+    // Close menu when a link is clicked (better UX)
+    document.addEventListener('DOMContentLoaded', function() {
+        const links = document.querySelectorAll('.mega-menu a');
+        links.forEach(link => {
+            link.addEventListener('click', function() {
+                const menu = document.getElementById('megaMenu');
+                const toggle = document.querySelector('.menu-toggle');
+                if (menu.classList.contains('open')) {
+                    menu.classList.remove('open');
+                    toggle.classList.remove('active');
+                }
+            });
+        });
+    });
+</script>
+<!-- ═══ MOBILE MENU STYLES (if not already in style.css) ═══ -->
+<style>
+    /* Ensure these styles are also in style.css, but include here as fallback */
+    .menu-toggle {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+        z-index: 101;
+    }
+    .menu-toggle span {
+        display: block;
+        width: 28px;
+        height: 3px;
+        background: var(--text);
+        border-radius: 3px;
+        transition: 0.3s;
+    }
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    @media (max-width: 900px) {
+        .menu-toggle {
+            display: flex;
+        }
+        .mega-menu {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            padding: 1rem 0;
+            background: var(--bg);
+            border-top: 1px solid var(--border);
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        .mega-menu.open {
+            display: flex;
+        }
+        .mega-menu li {
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+        }
+        .mega-menu li:last-child {
+            border-bottom: none;
+        }
+        .mega-menu li .dropdown {
+            display: none;
+            background: var(--surface2);
+            padding: 0.5rem 0;
+        }
+        .mega-menu li .dropdown a {
+            padding: 0.5rem 1rem;
+            display: block;
+            font-size: 0.9rem;
+        }
+        .mega-menu li:hover .dropdown {
+            display: none; /* prevent hover on mobile */
+        }
+        /* On mobile, show dropdown when parent is clicked? */
+        /* For simplicity, we keep dropdown items visible on mobile? We'll rely on the parent link. */
+        /* Better: on mobile, dropdown items can be shown as submenu items without dropdown. */
+        .mega-menu li a {
+            padding: 12px 0;
+            display: block;
+            width: 100%;
+        }
+        .nav-inner {
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-size: 1.2rem;
+        }
+        .nav-cta {
+            font-size: 12px !important;
+            padding: 6px 12px !important;
+        }
+    }
+</style>
+<!-- ═══ MOBILE MENU TOGGLE SCRIPT ═══ -->
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('megaMenu');
+        const toggle = document.querySelector('.menu-toggle');
+        menu.classList.toggle('open');
+        toggle.classList.toggle('active');
+    }
+
+    // Close menu when a link is clicked (better UX)
+    document.addEventListener('DOMContentLoaded', function() {
+        const links = document.querySelectorAll('.mega-menu a');
+        links.forEach(link => {
+            link.addEventListener('click', function() {
+                const menu = document.getElementById('megaMenu');
+                const toggle = document.querySelector('.menu-toggle');
+                if (menu.classList.contains('open')) {
+                    menu.classList.remove('open');
+                    toggle.classList.remove('active');
+                }
+            });
+        });
+    });
+</script>
+<!-- ═══ MOBILE MENU STYLES (if not already in style.css) ═══ -->
+<style>
+    /* Ensure these styles are also in style.css, but include here as fallback */
+    .menu-toggle {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+        z-index: 101;
+    }
+    .menu-toggle span {
+        display: block;
+        width: 28px;
+        height: 3px;
+        background: var(--text);
+        border-radius: 3px;
+        transition: 0.3s;
+    }
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    @media (max-width: 900px) {
+        .menu-toggle {
+            display: flex;
+        }
+        .mega-menu {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            padding: 1rem 0;
+            background: var(--bg);
+            border-top: 1px solid var(--border);
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        .mega-menu.open {
+            display: flex;
+        }
+        .mega-menu li {
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+        }
+        .mega-menu li:last-child {
+            border-bottom: none;
+        }
+        .mega-menu li .dropdown {
+            display: none;
+            background: var(--surface2);
+            padding: 0.5rem 0;
+        }
+        .mega-menu li .dropdown a {
+            padding: 0.5rem 1rem;
+            display: block;
+            font-size: 0.9rem;
+        }
+        .mega-menu li:hover .dropdown {
+            display: none; /* prevent hover on mobile */
+        }
+        /* On mobile, show dropdown when parent is clicked? */
+        /* For simplicity, we keep dropdown items visible on mobile? We'll rely on the parent link. */
+        /* Better: on mobile, dropdown items can be shown as submenu items without dropdown. */
+        .mega-menu li a {
+            padding: 12px 0;
+            display: block;
+            width: 100%;
+        }
+        .nav-inner {
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-size: 1.2rem;
+        }
+        .nav-cta {
+            font-size: 12px !important;
+            padding: 6px 12px !important;
+        }
+    }
+</style>
+<!-- ═══ MOBILE MENU TOGGLE SCRIPT ═══ -->
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('megaMenu');
+        const toggle = document.querySelector('.menu-toggle');
+        menu.classList.toggle('open');
+        toggle.classList.toggle('active');
+    }
+
+    // Close menu when a link is clicked (better UX)
+    document.addEventListener('DOMContentLoaded', function() {
+        const links = document.querySelectorAll('.mega-menu a');
+        links.forEach(link => {
+            link.addEventListener('click', function() {
+                const menu = document.getElementById('megaMenu');
+                const toggle = document.querySelector('.menu-toggle');
+                if (menu.classList.contains('open')) {
+                    menu.classList.remove('open');
+                    toggle.classList.remove('active');
+                }
+            });
+        });
+    });
+</script>
+<!-- ═══ MOBILE MENU STYLES (if not already in style.css) ═══ -->
+<style>
+    /* Ensure these styles are also in style.css, but include here as fallback */
+    .menu-toggle {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+        z-index: 101;
+    }
+    .menu-toggle span {
+        display: block;
+        width: 28px;
+        height: 3px;
+        background: var(--text);
+        border-radius: 3px;
+        transition: 0.3s;
+    }
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    @media (max-width: 900px) {
+        .menu-toggle {
+            display: flex;
+        }
+        .mega-menu {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            padding: 1rem 0;
+            background: var(--bg);
+            border-top: 1px solid var(--border);
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        .mega-menu.open {
+            display: flex;
+        }
+        .mega-menu li {
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+        }
+        .mega-menu li:last-child {
+            border-bottom: none;
+        }
+        .mega-menu li .dropdown {
+            display: none;
+            background: var(--surface2);
+            padding: 0.5rem 0;
+        }
+        .mega-menu li .dropdown a {
+            padding: 0.5rem 1rem;
+            display: block;
+            font-size: 0.9rem;
+        }
+        .mega-menu li:hover .dropdown {
+            display: none; /* prevent hover on mobile */
+        }
+        /* On mobile, show dropdown when parent is clicked? */
+        /* For simplicity, we keep dropdown items visible on mobile? We'll rely on the parent link. */
+        /* Better: on mobile, dropdown items can be shown as submenu items without dropdown. */
+        .mega-menu li a {
+            padding: 12px 0;
+            display: block;
+            width: 100%;
+        }
+        .nav-inner {
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-size: 1.2rem;
+        }
+        .nav-cta {
+            font-size: 12px !important;
+            padding: 6px 12px !important;
+        }
+    }
+</style>
+<!-- ═══ MOBILE MENU TOGGLE SCRIPT ═══ -->
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('megaMenu');
+        const toggle = document.querySelector('.menu-toggle');
+        menu.classList.toggle('open');
+        toggle.classList.toggle('active');
+    }
+
+    // Close menu when a link is clicked (better UX)
+    document.addEventListener('DOMContentLoaded', function() {
+        const links = document.querySelectorAll('.mega-menu a');
+        links.forEach(link => {
+            link.addEventListener('click', function() {
+                const menu = document.getElementById('megaMenu');
+                const toggle = document.querySelector('.menu-toggle');
+                if (menu.classList.contains('open')) {
+                    menu.classList.remove('open');
+                    toggle.classList.remove('active');
+                }
+            });
+        });
+    });
+</script>
+<!-- ═══ MOBILE MENU STYLES (if not already in style.css) ═══ -->
+<style>
+    /* Ensure these styles are also in style.css, but include here as fallback */
+    .menu-toggle {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+        z-index: 101;
+    }
+    .menu-toggle span {
+        display: block;
+        width: 28px;
+        height: 3px;
+        background: var(--text);
+        border-radius: 3px;
+        transition: 0.3s;
+    }
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    @media (max-width: 900px) {
+        .menu-toggle {
+            display: flex;
+        }
+        .mega-menu {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            padding: 1rem 0;
+            background: var(--bg);
+            border-top: 1px solid var(--border);
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        .mega-menu.open {
+            display: flex;
+        }
+        .mega-menu li {
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+        }
+        .mega-menu li:last-child {
+            border-bottom: none;
+        }
+        .mega-menu li .dropdown {
+            display: none;
+            background: var(--surface2);
+            padding: 0.5rem 0;
+        }
+        .mega-menu li .dropdown a {
+            padding: 0.5rem 1rem;
+            display: block;
+            font-size: 0.9rem;
+        }
+        .mega-menu li:hover .dropdown {
+            display: none; /* prevent hover on mobile */
+        }
+        /* On mobile, show dropdown when parent is clicked? */
+        /* For simplicity, we keep dropdown items visible on mobile? We'll rely on the parent link. */
+        /* Better: on mobile, dropdown items can be shown as submenu items without dropdown. */
+        .mega-menu li a {
+            padding: 12px 0;
+            display: block;
+            width: 100%;
+        }
+        .nav-inner {
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-size: 1.2rem;
+        }
+        .nav-cta {
+            font-size: 12px !important;
+            padding: 6px 12px !important;
+        }
+    }
+</style>
+<!-- ═══ MOBILE MENU TOGGLE SCRIPT ═══ -->
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('megaMenu');
+        const toggle = document.querySelector('.menu-toggle');
+        menu.classList.toggle('open');
+        toggle.classList.toggle('active');
+    }
+
+    // Close menu when a link is clicked (better UX)
+    document.addEventListener('DOMContentLoaded', function() {
+        const links = document.querySelectorAll('.mega-menu a');
+        links.forEach(link => {
+            link.addEventListener('click', function() {
+                const menu = document.getElementById('megaMenu');
+                const toggle = document.querySelector('.menu-toggle');
+                if (menu.classList.contains('open')) {
+                    menu.classList.remove('open');
+                    toggle.classList.remove('active');
+                }
+            });
+        });
+    });
+</script>
+<!-- ═══ MOBILE MENU STYLES (if not already in style.css) ═══ -->
+<style>
+    /* Ensure these styles are also in style.css, but include here as fallback */
+    .menu-toggle {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+        z-index: 101;
+    }
+    .menu-toggle span {
+        display: block;
+        width: 28px;
+        height: 3px;
+        background: var(--text);
+        border-radius: 3px;
+        transition: 0.3s;
+    }
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    @media (max-width: 900px) {
+        .menu-toggle {
+            display: flex;
+        }
+        .mega-menu {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            padding: 1rem 0;
+            background: var(--bg);
+            border-top: 1px solid var(--border);
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        .mega-menu.open {
+            display: flex;
+        }
+        .mega-menu li {
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+        }
+        .mega-menu li:last-child {
+            border-bottom: none;
+        }
+        .mega-menu li .dropdown {
+            display: none;
+            background: var(--surface2);
+            padding: 0.5rem 0;
+        }
+        .mega-menu li .dropdown a {
+            padding: 0.5rem 1rem;
+            display: block;
+            font-size: 0.9rem;
+        }
+        .mega-menu li:hover .dropdown {
+            display: none; /* prevent hover on mobile */
+        }
+        /* On mobile, show dropdown when parent is clicked? */
+        /* For simplicity, we keep dropdown items visible on mobile? We'll rely on the parent link. */
+        /* Better: on mobile, dropdown items can be shown as submenu items without dropdown. */
+        .mega-menu li a {
+            padding: 12px 0;
+            display: block;
+            width: 100%;
+        }
+        .nav-inner {
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-size: 1.2rem;
+        }
+        .nav-cta {
+            font-size: 12px !important;
+            padding: 6px 12px !important;
+        }
+    }
+</style>
+<!-- ═══ MOBILE MENU TOGGLE SCRIPT ═══ -->
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('megaMenu');
+        const toggle = document.querySelector('.menu-toggle');
+        menu.classList.toggle('open');
+        toggle.classList.toggle('active');
+    }
+
+    // Close menu when a link is clicked (better UX)
+    document.addEventListener('DOMContentLoaded', function() {
+        const links = document.querySelectorAll('.mega-menu a');
+        links.forEach(link => {
+            link.addEventListener('click', function() {
+                const menu = document.getElementById('megaMenu');
+                const toggle = document.querySelector('.menu-toggle');
+                if (menu.classList.contains('open')) {
+                    menu.classList.remove('open');
+                    toggle.classList.remove('active');
+                }
+            });
+        });
+    });
+</script>
+<!-- ═══ MOBILE MENU STYLES (if not already in style.css) ═══ -->
+<style>
+    /* Ensure these styles are also in style.css, but include here as fallback */
+    .menu-toggle {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+        z-index: 101;
+    }
+    .menu-toggle span {
+        display: block;
+        width: 28px;
+        height: 3px;
+        background: var(--text);
+        border-radius: 3px;
+        transition: 0.3s;
+    }
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    @media (max-width: 900px) {
+        .menu-toggle {
+            display: flex;
+        }
+        .mega-menu {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            padding: 1rem 0;
+            background: var(--bg);
+            border-top: 1px solid var(--border);
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        .mega-menu.open {
+            display: flex;
+        }
+        .mega-menu li {
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+        }
+        .mega-menu li:last-child {
+            border-bottom: none;
+        }
+        .mega-menu li .dropdown {
+            display: none;
+            background: var(--surface2);
+            padding: 0.5rem 0;
+        }
+        .mega-menu li .dropdown a {
+            padding: 0.5rem 1rem;
+            display: block;
+            font-size: 0.9rem;
+        }
+        .mega-menu li:hover .dropdown {
+            display: none; /* prevent hover on mobile */
+        }
+        /* On mobile, show dropdown when parent is clicked? */
+        /* For simplicity, we keep dropdown items visible on mobile? We'll rely on the parent link. */
+        /* Better: on mobile, dropdown items can be shown as submenu items without dropdown. */
+        .mega-menu li a {
+            padding: 12px 0;
+            display: block;
+            width: 100%;
+        }
+        .nav-inner {
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-size: 1.2rem;
+        }
+        .nav-cta {
+            font-size: 12px !important;
+            padding: 6px 12px !important;
+        }
+    }
+</style>
+<!-- ═══ MOBILE MENU TOGGLE SCRIPT ═══ -->
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('megaMenu');
+        const toggle = document.querySelector('.menu-toggle');
+        menu.classList.toggle('open');
+        toggle.classList.toggle('active');
+    }
+
+    // Close menu when a link is clicked (better UX)
+    document.addEventListener('DOMContentLoaded', function() {
+        const links = document.querySelectorAll('.mega-menu a');
+        links.forEach(link => {
+            link.addEventListener('click', function() {
+                const menu = document.getElementById('megaMenu');
+                const toggle = document.querySelector('.menu-toggle');
+                if (menu.classList.contains('open')) {
+                    menu.classList.remove('open');
+                    toggle.classList.remove('active');
+                }
+            });
+        });
+    });
+</script>
+<!-- ═══ MOBILE MENU STYLES (if not already in style.css) ═══ -->
+<style>
+    /* Ensure these styles are also in style.css, but include here as fallback */
+    .menu-toggle {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+        z-index: 101;
+    }
+    .menu-toggle span {
+        display: block;
+        width: 28px;
+        height: 3px;
+        background: var(--text);
+        border-radius: 3px;
+        transition: 0.3s;
+    }
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    @media (max-width: 900px) {
+        .menu-toggle {
+            display: flex;
+        }
+        .mega-menu {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            padding: 1rem 0;
+            background: var(--bg);
+            border-top: 1px solid var(--border);
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        .mega-menu.open {
+            display: flex;
+        }
+        .mega-menu li {
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+        }
+        .mega-menu li:last-child {
+            border-bottom: none;
+        }
+        .mega-menu li .dropdown {
+            display: none;
+            background: var(--surface2);
+            padding: 0.5rem 0;
+        }
+        .mega-menu li .dropdown a {
+            padding: 0.5rem 1rem;
+            display: block;
+            font-size: 0.9rem;
+        }
+        .mega-menu li:hover .dropdown {
+            display: none; /* prevent hover on mobile */
+        }
+        /* On mobile, show dropdown when parent is clicked? */
+        /* For simplicity, we keep dropdown items visible on mobile? We'll rely on the parent link. */
+        /* Better: on mobile, dropdown items can be shown as submenu items without dropdown. */
+        .mega-menu li a {
+            padding: 12px 0;
+            display: block;
+            width: 100%;
+        }
+        .nav-inner {
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-size: 1.2rem;
+        }
+        .nav-cta {
+            font-size: 12px !important;
+            padding: 6px 12px !important;
+        }
+    }
+</style>
+<!-- ═══ MOBILE MENU TOGGLE SCRIPT ═══ -->
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('megaMenu');
+        const toggle = document.querySelector('.menu-toggle');
+        menu.classList.toggle('open');
+        toggle.classList.toggle('active');
+    }
+
+    // Close menu when a link is clicked (better UX)
+    document.addEventListener('DOMContentLoaded', function() {
+        const links = document.querySelectorAll('.mega-menu a');
+        links.forEach(link => {
+            link.addEventListener('click', function() {
+                const menu = document.getElementById('megaMenu');
+                const toggle = document.querySelector('.menu-toggle');
+                if (menu.classList.contains('open')) {
+                    menu.classList.remove('open');
+                    toggle.classList.remove('active');
+                }
+            });
+        });
+    });
+</script>
+<!-- ═══ MOBILE MENU STYLES (if not already in style.css) ═══ -->
+<style>
+    /* Ensure these styles are also in style.css, but include here as fallback */
+    .menu-toggle {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+        z-index: 101;
+    }
+    .menu-toggle span {
+        display: block;
+        width: 28px;
+        height: 3px;
+        background: var(--text);
+        border-radius: 3px;
+        transition: 0.3s;
+    }
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    @media (max-width: 900px) {
+        .menu-toggle {
+            display: flex;
+        }
+        .mega-menu {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            padding: 1rem 0;
+            background: var(--bg);
+            border-top: 1px solid var(--border);
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        .mega-menu.open {
+            display: flex;
+        }
+        .mega-menu li {
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+        }
+        .mega-menu li:last-child {
+            border-bottom: none;
+        }
+        .mega-menu li .dropdown {
+            display: none;
+            background: var(--surface2);
+            padding: 0.5rem 0;
+        }
+        .mega-menu li .dropdown a {
+            padding: 0.5rem 1rem;
+            display: block;
+            font-size: 0.9rem;
+        }
+        .mega-menu li:hover .dropdown {
+            display: none; /* prevent hover on mobile */
+        }
+        /* On mobile, show dropdown when parent is clicked? */
+        /* For simplicity, we keep dropdown items visible on mobile? We'll rely on the parent link. */
+        /* Better: on mobile, dropdown items can be shown as submenu items without dropdown. */
+        .mega-menu li a {
+            padding: 12px 0;
+            display: block;
+            width: 100%;
+        }
+        .nav-inner {
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-size: 1.2rem;
+        }
+        .nav-cta {
+            font-size: 12px !important;
+            padding: 6px 12px !important;
+        }
+    }
+</style>
+<!-- ═══ MOBILE MENU TOGGLE SCRIPT ═══ -->
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('megaMenu');
+        const toggle = document.querySelector('.menu-toggle');
+        menu.classList.toggle('open');
+        toggle.classList.toggle('active');
+    }
+
+    // Close menu when a link is clicked (better UX)
+    document.addEventListener('DOMContentLoaded', function() {
+        const links = document.querySelectorAll('.mega-menu a');
+        links.forEach(link => {
+            link.addEventListener('click', function() {
+                const menu = document.getElementById('megaMenu');
+                const toggle = document.querySelector('.menu-toggle');
+                if (menu.classList.contains('open')) {
+                    menu.classList.remove('open');
+                    toggle.classList.remove('active');
+                }
+            });
+        });
+    });
+</script>
+<!-- ═══ MOBILE MENU STYLES (if not already in style.css) ═══ -->
+<style>
+    /* Ensure these styles are also in style.css, but include here as fallback */
+    .menu-toggle {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+        z-index: 101;
+    }
+    .menu-toggle span {
+        display: block;
+        width: 28px;
+        height: 3px;
+        background: var(--text);
+        border-radius: 3px;
+        transition: 0.3s;
+    }
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    @media (max-width: 900px) {
+        .menu-toggle {
+            display: flex;
+        }
+        .mega-menu {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            padding: 1rem 0;
+            background: var(--bg);
+            border-top: 1px solid var(--border);
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        .mega-menu.open {
+            display: flex;
+        }
+        .mega-menu li {
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+        }
+        .mega-menu li:last-child {
+            border-bottom: none;
+        }
+        .mega-menu li .dropdown {
+            display: none;
+            background: var(--surface2);
+            padding: 0.5rem 0;
+        }
+        .mega-menu li .dropdown a {
+            padding: 0.5rem 1rem;
+            display: block;
+            font-size: 0.9rem;
+        }
+        .mega-menu li:hover .dropdown {
+            display: none; /* prevent hover on mobile */
+        }
+        /* On mobile, show dropdown when parent is clicked? */
+        /* For simplicity, we keep dropdown items visible on mobile? We'll rely on the parent link. */
+        /* Better: on mobile, dropdown items can be shown as submenu items without dropdown. */
+        .mega-menu li a {
+            padding: 12px 0;
+            display: block;
+            width: 100%;
+        }
+        .nav-inner {
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-size: 1.2rem;
+        }
+        .nav-cta {
+            font-size: 12px !important;
+            padding: 6px 12px !important;
+        }
+    }
+</style>
+<!-- ═══ MOBILE MENU TOGGLE SCRIPT ═══ -->
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('megaMenu');
+        const toggle = document.querySelector('.menu-toggle');
+        menu.classList.toggle('open');
+        toggle.classList.toggle('active');
+    }
+
+    // Close menu when a link is clicked (better UX)
+    document.addEventListener('DOMContentLoaded', function() {
+        const links = document.querySelectorAll('.mega-menu a');
+        links.forEach(link => {
+            link.addEventListener('click', function() {
+                const menu = document.getElementById('megaMenu');
+                const toggle = document.querySelector('.menu-toggle');
+                if (menu.classList.contains('open')) {
+                    menu.classList.remove('open');
+                    toggle.classList.remove('active');
+                }
+            });
+        });
+    });
+</script>
+<!-- ═══ MOBILE MENU STYLES (if not already in style.css) ═══ -->
+<style>
+    /* Ensure these styles are also in style.css, but include here as fallback */
+    .menu-toggle {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+        z-index: 101;
+    }
+    .menu-toggle span {
+        display: block;
+        width: 28px;
+        height: 3px;
+        background: var(--text);
+        border-radius: 3px;
+        transition: 0.3s;
+    }
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    @media (max-width: 900px) {
+        .menu-toggle {
+            display: flex;
+        }
+        .mega-menu {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            padding: 1rem 0;
+            background: var(--bg);
+            border-top: 1px solid var(--border);
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        .mega-menu.open {
+            display: flex;
+        }
+        .mega-menu li {
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+        }
+        .mega-menu li:last-child {
+            border-bottom: none;
+        }
+        .mega-menu li .dropdown {
+            display: none;
+            background: var(--surface2);
+            padding: 0.5rem 0;
+        }
+        .mega-menu li .dropdown a {
+            padding: 0.5rem 1rem;
+            display: block;
+            font-size: 0.9rem;
+        }
+        .mega-menu li:hover .dropdown {
+            display: none; /* prevent hover on mobile */
+        }
+        /* On mobile, show dropdown when parent is clicked? */
+        /* For simplicity, we keep dropdown items visible on mobile? We'll rely on the parent link. */
+        /* Better: on mobile, dropdown items can be shown as submenu items without dropdown. */
+        .mega-menu li a {
+            padding: 12px 0;
+            display: block;
+            width: 100%;
+        }
+        .nav-inner {
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-size: 1.2rem;
+        }
+        .nav-cta {
+            font-size: 12px !important;
+            padding: 6px 12px !important;
+        }
+    }
+</style>
+<!-- ═══ MOBILE MENU TOGGLE SCRIPT ═══ -->
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('megaMenu');
+        const toggle = document.querySelector('.menu-toggle');
+        menu.classList.toggle('open');
+        toggle.classList.toggle('active');
+    }
+
+    // Close menu when a link is clicked (better UX)
+    document.addEventListener('DOMContentLoaded', function() {
+        const links = document.querySelectorAll('.mega-menu a');
+        links.forEach(link => {
+            link.addEventListener('click', function() {
+                const menu = document.getElementById('megaMenu');
+                const toggle = document.querySelector('.menu-toggle');
+                if (menu.classList.contains('open')) {
+                    menu.classList.remove('open');
+                    toggle.classList.remove('active');
+                }
+            });
+        });
+    });
+</script>
+<!-- ═══ MOBILE MENU STYLES (if not already in style.css) ═══ -->
+<style>
+    /* Ensure these styles are also in style.css, but include here as fallback */
+    .menu-toggle {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+        z-index: 101;
+    }
+    .menu-toggle span {
+        display: block;
+        width: 28px;
+        height: 3px;
+        background: var(--text);
+        border-radius: 3px;
+        transition: 0.3s;
+    }
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    @media (max-width: 900px) {
+        .menu-toggle {
+            display: flex;
+        }
+        .mega-menu {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            padding: 1rem 0;
+            background: var(--bg);
+            border-top: 1px solid var(--border);
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        .mega-menu.open {
+            display: flex;
+        }
+        .mega-menu li {
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+        }
+        .mega-menu li:last-child {
+            border-bottom: none;
+        }
+        .mega-menu li .dropdown {
+            display: none;
+            background: var(--surface2);
+            padding: 0.5rem 0;
+        }
+        .mega-menu li .dropdown a {
+            padding: 0.5rem 1rem;
+            display: block;
+            font-size: 0.9rem;
+        }
+        .mega-menu li:hover .dropdown {
+            display: none; /* prevent hover on mobile */
+        }
+        /* On mobile, show dropdown when parent is clicked? */
+        /* For simplicity, we keep dropdown items visible on mobile? We'll rely on the parent link. */
+        /* Better: on mobile, dropdown items can be shown as submenu items without dropdown. */
+        .mega-menu li a {
+            padding: 12px 0;
+            display: block;
+            width: 100%;
+        }
+        .nav-inner {
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-size: 1.2rem;
+        }
+        .nav-cta {
+            font-size: 12px !important;
+            padding: 6px 12px !important;
+        }
+    }
+</style>
+<!-- ═══ MOBILE MENU TOGGLE SCRIPT ═══ -->
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('megaMenu');
+        const toggle = document.querySelector('.menu-toggle');
+        menu.classList.toggle('open');
+        toggle.classList.toggle('active');
+    }
+
+    // Close menu when a link is clicked (better UX)
+    document.addEventListener('DOMContentLoaded', function() {
+        const links = document.querySelectorAll('.mega-menu a');
+        links.forEach(link => {
+            link.addEventListener('click', function() {
+                const menu = document.getElementById('megaMenu');
+                const toggle = document.querySelector('.menu-toggle');
+                if (menu.classList.contains('open')) {
+                    menu.classList.remove('open');
+                    toggle.classList.remove('active');
+                }
+            });
+        });
+    });
+</script>
+<!-- ═══ MOBILE MENU STYLES (if not already in style.css) ═══ -->
+<style>
+    /* Ensure these styles are also in style.css, but include here as fallback */
+    .menu-toggle {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+        z-index: 101;
+    }
+    .menu-toggle span {
+        display: block;
+        width: 28px;
+        height: 3px;
+        background: var(--text);
+        border-radius: 3px;
+        transition: 0.3s;
+    }
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    @media (max-width: 900px) {
+        .menu-toggle {
+            display: flex;
+        }
+        .mega-menu {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            padding: 1rem 0;
+            background: var(--bg);
+            border-top: 1px solid var(--border);
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        .mega-menu.open {
+            display: flex;
+        }
+        .mega-menu li {
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+        }
+        .mega-menu li:last-child {
+            border-bottom: none;
+        }
+        .mega-menu li .dropdown {
+            display: none;
+            background: var(--surface2);
+            padding: 0.5rem 0;
+        }
+        .mega-menu li .dropdown a {
+            padding: 0.5rem 1rem;
+            display: block;
+            font-size: 0.9rem;
+        }
+        .mega-menu li:hover .dropdown {
+            display: none; /* prevent hover on mobile */
+        }
+        /* On mobile, show dropdown when parent is clicked? */
+        /* For simplicity, we keep dropdown items visible on mobile? We'll rely on the parent link. */
+        /* Better: on mobile, dropdown items can be shown as submenu items without dropdown. */
+        .mega-menu li a {
+            padding: 12px 0;
+            display: block;
+            width: 100%;
+        }
+        .nav-inner {
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-size: 1.2rem;
+        }
+        .nav-cta {
+            font-size: 12px !important;
+            padding: 6px 12px !important;
+        }
+    }
+</style>
+<!-- ═══ MOBILE MENU TOGGLE SCRIPT ═══ -->
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('megaMenu');
+        const toggle = document.querySelector('.menu-toggle');
+        menu.classList.toggle('open');
+        toggle.classList.toggle('active');
+    }
+
+    // Close menu when a link is clicked (better UX)
+    document.addEventListener('DOMContentLoaded', function() {
+        const links = document.querySelectorAll('.mega-menu a');
+        links.forEach(link => {
+            link.addEventListener('click', function() {
+                const menu = document.getElementById('megaMenu');
+                const toggle = document.querySelector('.menu-toggle');
+                if (menu.classList.contains('open')) {
+                    menu.classList.remove('open');
+                    toggle.classList.remove('active');
+                }
+            });
+        });
+    });
+</script>
+<!-- ═══ MOBILE MENU STYLES (if not already in style.css) ═══ -->
+<style>
+    /* Ensure these styles are also in style.css, but include here as fallback */
+    .menu-toggle {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+        z-index: 101;
+    }
+    .menu-toggle span {
+        display: block;
+        width: 28px;
+        height: 3px;
+        background: var(--text);
+        border-radius: 3px;
+        transition: 0.3s;
+    }
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    @media (max-width: 900px) {
+        .menu-toggle {
+            display: flex;
+        }
+        .mega-menu {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            padding: 1rem 0;
+            background: var(--bg);
+            border-top: 1px solid var(--border);
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        .mega-menu.open {
+            display: flex;
+        }
+        .mega-menu li {
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+        }
+        .mega-menu li:last-child {
+            border-bottom: none;
+        }
+        .mega-menu li .dropdown {
+            display: none;
+            background: var(--surface2);
+            padding: 0.5rem 0;
+        }
+        .mega-menu li .dropdown a {
+            padding: 0.5rem 1rem;
+            display: block;
+            font-size: 0.9rem;
+        }
+        .mega-menu li:hover .dropdown {
+            display: none; /* prevent hover on mobile */
+        }
+        /* On mobile, show dropdown when parent is clicked? */
+        /* For simplicity, we keep dropdown items visible on mobile? We'll rely on the parent link. */
+        /* Better: on mobile, dropdown items can be shown as submenu items without dropdown. */
+        .mega-menu li a {
+            padding: 12px 0;
+            display: block;
+            width: 100%;
+        }
+        .nav-inner {
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-size: 1.2rem;
+        }
+        .nav-cta {
+            font-size: 12px !important;
+            padding: 6px 12px !important;
+        }
+    }
+</style>
+<!-- ═══ MOBILE MENU TOGGLE SCRIPT ═══ -->
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('megaMenu');
+        const toggle = document.querySelector('.menu-toggle');
+        menu.classList.toggle('open');
+        toggle.classList.toggle('active');
+    }
+
+    // Close menu when a link is clicked (better UX)
+    document.addEventListener('DOMContentLoaded', function() {
+        const links = document.querySelectorAll('.mega-menu a');
+        links.forEach(link => {
+            link.addEventListener('click', function() {
+                const menu = document.getElementById('megaMenu');
+                const toggle = document.querySelector('.menu-toggle');
+                if (menu.classList.contains('open')) {
+                    menu.classList.remove('open');
+                    toggle.classList.remove('active');
+                }
+            });
+        });
+    });
+</script>
+<!-- ═══ MOBILE MENU STYLES (if not already in style.css) ═══ -->
+<style>
+    /* Ensure these styles are also in style.css, but include here as fallback */
+    .menu-toggle {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+        z-index: 101;
+    }
+    .menu-toggle span {
+        display: block;
+        width: 28px;
+        height: 3px;
+        background: var(--text);
+        border-radius: 3px;
+        transition: 0.3s;
+    }
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    @media (max-width: 900px) {
+        .menu-toggle {
+            display: flex;
+        }
+        .mega-menu {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            padding: 1rem 0;
+            background: var(--bg);
+            border-top: 1px solid var(--border);
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        .mega-menu.open {
+            display: flex;
+        }
+        .mega-menu li {
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+        }
+        .mega-menu li:last-child {
+            border-bottom: none;
+        }
+        .mega-menu li .dropdown {
+            display: none;
+            background: var(--surface2);
+            padding: 0.5rem 0;
+        }
+        .mega-menu li .dropdown a {
+            padding: 0.5rem 1rem;
+            display: block;
+            font-size: 0.9rem;
+        }
+        .mega-menu li:hover .dropdown {
+            display: none; /* prevent hover on mobile */
+        }
+        /* On mobile, show dropdown when parent is clicked? */
+        /* For simplicity, we keep dropdown items visible on mobile? We'll rely on the parent link. */
+        /* Better: on mobile, dropdown items can be shown as submenu items without dropdown. */
+        .mega-menu li a {
+            padding: 12px 0;
+            display: block;
+            width: 100%;
+        }
+        .nav-inner {
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-size: 1.2rem;
+        }
+        .nav-cta {
+            font-size: 12px !important;
+            padding: 6px 12px !important;
+        }
+    }
+</style>
+<!-- ═══ MOBILE MENU TOGGLE SCRIPT ═══ -->
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('megaMenu');
+        const toggle = document.querySelector('.menu-toggle');
+        menu.classList.toggle('open');
+        toggle.classList.toggle('active');
+    }
+
+    // Close menu when a link is clicked (better UX)
+    document.addEventListener('DOMContentLoaded', function() {
+        const links = document.querySelectorAll('.mega-menu a');
+        links.forEach(link => {
+            link.addEventListener('click', function() {
+                const menu = document.getElementById('megaMenu');
+                const toggle = document.querySelector('.menu-toggle');
+                if (menu.classList.contains('open')) {
+                    menu.classList.remove('open');
+                    toggle.classList.remove('active');
+                }
+            });
+        });
+    });
+</script>
+<!-- ═══ MOBILE MENU STYLES (if not already in style.css) ═══ -->
+<style>
+    /* Ensure these styles are also in style.css, but include here as fallback */
+    .menu-toggle {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+        z-index: 101;
+    }
+    .menu-toggle span {
+        display: block;
+        width: 28px;
+        height: 3px;
+        background: var(--text);
+        border-radius: 3px;
+        transition: 0.3s;
+    }
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    @media (max-width: 900px) {
+        .menu-toggle {
+            display: flex;
+        }
+        .mega-menu {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            padding: 1rem 0;
+            background: var(--bg);
+            border-top: 1px solid var(--border);
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        .mega-menu.open {
+            display: flex;
+        }
+        .mega-menu li {
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+        }
+        .mega-menu li:last-child {
+            border-bottom: none;
+        }
+        .mega-menu li .dropdown {
+            display: none;
+            background: var(--surface2);
+            padding: 0.5rem 0;
+        }
+        .mega-menu li .dropdown a {
+            padding: 0.5rem 1rem;
+            display: block;
+            font-size: 0.9rem;
+        }
+        .mega-menu li:hover .dropdown {
+            display: none; /* prevent hover on mobile */
+        }
+        /* On mobile, show dropdown when parent is clicked? */
+        /* For simplicity, we keep dropdown items visible on mobile? We'll rely on the parent link. */
+        /* Better: on mobile, dropdown items can be shown as submenu items without dropdown. */
+        .mega-menu li a {
+            padding: 12px 0;
+            display: block;
+            width: 100%;
+        }
+        .nav-inner {
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-size: 1.2rem;
+        }
+        .nav-cta {
+            font-size: 12px !important;
+            padding: 6px 12px !important;
+        }
+    }
+</style>
+<!-- ═══ MOBILE MENU TOGGLE SCRIPT ═══ -->
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('megaMenu');
+        const toggle = document.querySelector('.menu-toggle');
+        menu.classList.toggle('open');
+        toggle.classList.toggle('active');
+    }
+
+    // Close menu when a link is clicked (better UX)
+    document.addEventListener('DOMContentLoaded', function() {
+        const links = document.querySelectorAll('.mega-menu a');
+        links.forEach(link => {
+            link.addEventListener('click', function() {
+                const menu = document.getElementById('megaMenu');
+                const toggle = document.querySelector('.menu-toggle');
+                if (menu.classList.contains('open')) {
+                    menu.classList.remove('open');
+                    toggle.classList.remove('active');
+                }
+            });
+        });
+    });
+</script>
+<!-- ═══ MOBILE MENU STYLES (if not already in style.css) ═══ -->
+<style>
+    /* Ensure these styles are also in style.css, but include here as fallback */
+    .menu-toggle {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+        z-index: 101;
+    }
+    .menu-toggle span {
+        display: block;
+        width: 28px;
+        height: 3px;
+        background: var(--text);
+        border-radius: 3px;
+        transition: 0.3s;
+    }
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    @media (max-width: 900px) {
+        .menu-toggle {
+            display: flex;
+        }
+        .mega-menu {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            padding: 1rem 0;
+            background: var(--bg);
+            border-top: 1px solid var(--border);
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        .mega-menu.open {
+            display: flex;
+        }
+        .mega-menu li {
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+        }
+        .mega-menu li:last-child {
+            border-bottom: none;
+        }
+        .mega-menu li .dropdown {
+            display: none;
+            background: var(--surface2);
+            padding: 0.5rem 0;
+        }
+        .mega-menu li .dropdown a {
+            padding: 0.5rem 1rem;
+            display: block;
+            font-size: 0.9rem;
+        }
+        .mega-menu li:hover .dropdown {
+            display: none; /* prevent hover on mobile */
+        }
+        /* On mobile, show dropdown when parent is clicked? */
+        /* For simplicity, we keep dropdown items visible on mobile? We'll rely on the parent link. */
+        /* Better: on mobile, dropdown items can be shown as submenu items without dropdown. */
+        .mega-menu li a {
+            padding: 12px 0;
+            display: block;
+            width: 100%;
+        }
+        .nav-inner {
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-size: 1.2rem;
+        }
+        .nav-cta {
+            font-size: 12px !important;
+            padding: 6px 12px !important;
+        }
+    }
+</style>
+<!-- ═══ MOBILE MENU TOGGLE SCRIPT ═══ -->
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('megaMenu');
+        const toggle = document.querySelector('.menu-toggle');
+        menu.classList.toggle('open');
+        toggle.classList.toggle('active');
+    }
+
+    // Close menu when a link is clicked (better UX)
+    document.addEventListener('DOMContentLoaded', function() {
+        const links = document.querySelectorAll('.mega-menu a');
+        links.forEach(link => {
+            link.addEventListener('click', function() {
+                const menu = document.getElementById('megaMenu');
+                const toggle = document.querySelector('.menu-toggle');
+                if (menu.classList.contains('open')) {
+                    menu.classList.remove('open');
+                    toggle.classList.remove('active');
+                }
+            });
+        });
+    });
+</script>
+<!-- ═══ MOBILE MENU STYLES (if not already in style.css) ═══ -->
+<style>
+    /* Ensure these styles are also in style.css, but include here as fallback */
+    .menu-toggle {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+        z-index: 101;
+    }
+    .menu-toggle span {
+        display: block;
+        width: 28px;
+        height: 3px;
+        background: var(--text);
+        border-radius: 3px;
+        transition: 0.3s;
+    }
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    @media (max-width: 900px) {
+        .menu-toggle {
+            display: flex;
+        }
+        .mega-menu {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            padding: 1rem 0;
+            background: var(--bg);
+            border-top: 1px solid var(--border);
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        .mega-menu.open {
+            display: flex;
+        }
+        .mega-menu li {
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+        }
+        .mega-menu li:last-child {
+            border-bottom: none;
+        }
+        .mega-menu li .dropdown {
+            display: none;
+            background: var(--surface2);
+            padding: 0.5rem 0;
+        }
+        .mega-menu li .dropdown a {
+            padding: 0.5rem 1rem;
+            display: block;
+            font-size: 0.9rem;
+        }
+        .mega-menu li:hover .dropdown {
+            display: none; /* prevent hover on mobile */
+        }
+        /* On mobile, show dropdown when parent is clicked? */
+        /* For simplicity, we keep dropdown items visible on mobile? We'll rely on the parent link. */
+        /* Better: on mobile, dropdown items can be shown as submenu items without dropdown. */
+        .mega-menu li a {
+            padding: 12px 0;
+            display: block;
+            width: 100%;
+        }
+        .nav-inner {
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-size: 1.2rem;
+        }
+        .nav-cta {
+            font-size: 12px !important;
+            padding: 6px 12px !important;
+        }
+    }
+</style>
+<!-- ═══ MOBILE MENU TOGGLE SCRIPT ═══ -->
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('megaMenu');
+        const toggle = document.querySelector('.menu-toggle');
+        menu.classList.toggle('open');
+        toggle.classList.toggle('active');
+    }
+
+    // Close menu when a link is clicked (better UX)
+    document.addEventListener('DOMContentLoaded', function() {
+        const links = document.querySelectorAll('.mega-menu a');
+        links.forEach(link => {
+            link.addEventListener('click', function() {
+                const menu = document.getElementById('megaMenu');
+                const toggle = document.querySelector('.menu-toggle');
+                if (menu.classList.contains('open')) {
+                    menu.classList.remove('open');
+                    toggle.classList.remove('active');
+                }
+            });
+        });
+    });
+</script>
+<!-- ═══ MOBILE MENU STYLES (if not already in style.css) ═══ -->
+<style>
+    /* Ensure these styles are also in style.css, but include here as fallback */
+    .menu-toggle {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+        z-index: 101;
+    }
+    .menu-toggle span {
+        display: block;
+        width: 28px;
+        height: 3px;
+        background: var(--text);
+        border-radius: 3px;
+        transition: 0.3s;
+    }
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    @media (max-width: 900px) {
+        .menu-toggle {
+            display: flex;
+        }
+        .mega-menu {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            padding: 1rem 0;
+            background: var(--bg);
+            border-top: 1px solid var(--border);
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        .mega-menu.open {
+            display: flex;
+        }
+        .mega-menu li {
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+        }
+        .mega-menu li:last-child {
+            border-bottom: none;
+        }
+        .mega-menu li .dropdown {
+            display: none;
+            background: var(--surface2);
+            padding: 0.5rem 0;
+        }
+        .mega-menu li .dropdown a {
+            padding: 0.5rem 1rem;
+            display: block;
+            font-size: 0.9rem;
+        }
+        .mega-menu li:hover .dropdown {
+            display: none; /* prevent hover on mobile */
+        }
+        /* On mobile, show dropdown when parent is clicked? */
+        /* For simplicity, we keep dropdown items visible on mobile? We'll rely on the parent link. */
+        /* Better: on mobile, dropdown items can be shown as submenu items without dropdown. */
+        .mega-menu li a {
+            padding: 12px 0;
+            display: block;
+            width: 100%;
+        }
+        .nav-inner {
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-size: 1.2rem;
+        }
+        .nav-cta {
+            font-size: 12px !important;
+            padding: 6px 12px !important;
+        }
+    }
+</style>
+<!-- ═══ MOBILE MENU TOGGLE SCRIPT ═══ -->
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('megaMenu');
+        const toggle = document.querySelector('.menu-toggle');
+        menu.classList.toggle('open');
+        toggle.classList.toggle('active');
+    }
+
+    // Close menu when a link is clicked (better UX)
+    document.addEventListener('DOMContentLoaded', function() {
+        const links = document.querySelectorAll('.mega-menu a');
+        links.forEach(link => {
+            link.addEventListener('click', function() {
+                const menu = document.getElementById('megaMenu');
+                const toggle = document.querySelector('.menu-toggle');
+                if (menu.classList.contains('open')) {
+                    menu.classList.remove('open');
+                    toggle.classList.remove('active');
+                }
+            });
+        });
+    });
+</script>
+<!-- ═══ MOBILE MENU STYLES (if not already in style.css) ═══ -->
+<style>
+    /* Ensure these styles are also in style.css, but include here as fallback */
+    .menu-toggle {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+        z-index: 101;
+    }
+    .menu-toggle span {
+        display: block;
+        width: 28px;
+        height: 3px;
+        background: var(--text);
+        border-radius: 3px;
+        transition: 0.3s;
+    }
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    @media (max-width: 900px) {
+        .menu-toggle {
+            display: flex;
+        }
+        .mega-menu {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            padding: 1rem 0;
+            background: var(--bg);
+            border-top: 1px solid var(--border);
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        .mega-menu.open {
+            display: flex;
+        }
+        .mega-menu li {
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+        }
+        .mega-menu li:last-child {
+            border-bottom: none;
+        }
+        .mega-menu li .dropdown {
+            display: none;
+            background: var(--surface2);
+            padding: 0.5rem 0;
+        }
+        .mega-menu li .dropdown a {
+            padding: 0.5rem 1rem;
+            display: block;
+            font-size: 0.9rem;
+        }
+        .mega-menu li:hover .dropdown {
+            display: none; /* prevent hover on mobile */
+        }
+        /* On mobile, show dropdown when parent is clicked? */
+        /* For simplicity, we keep dropdown items visible on mobile? We'll rely on the parent link. */
+        /* Better: on mobile, dropdown items can be shown as submenu items without dropdown. */
+        .mega-menu li a {
+            padding: 12px 0;
+            display: block;
+            width: 100%;
+        }
+        .nav-inner {
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-size: 1.2rem;
+        }
+        .nav-cta {
+            font-size: 12px !important;
+            padding: 6px 12px !important;
+        }
+    }
+</style>
+<!-- ═══ MOBILE MENU TOGGLE SCRIPT ═══ -->
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('megaMenu');
+        const toggle = document.querySelector('.menu-toggle');
+        menu.classList.toggle('open');
+        toggle.classList.toggle('active');
+    }
+
+    // Close menu when a link is clicked (better UX)
+    document.addEventListener('DOMContentLoaded', function() {
+        const links = document.querySelectorAll('.mega-menu a');
+        links.forEach(link => {
+            link.addEventListener('click', function() {
+                const menu = document.getElementById('megaMenu');
+                const toggle = document.querySelector('.menu-toggle');
+                if (menu.classList.contains('open')) {
+                    menu.classList.remove('open');
+                    toggle.classList.remove('active');
+                }
+            });
+        });
+    });
+</script>
+<!-- ═══ MOBILE MENU STYLES (if not already in style.css) ═══ -->
+<style>
+    /* Ensure these styles are also in style.css, but include here as fallback */
+    .menu-toggle {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+        z-index: 101;
+    }
+    .menu-toggle span {
+        display: block;
+        width: 28px;
+        height: 3px;
+        background: var(--text);
+        border-radius: 3px;
+        transition: 0.3s;
+    }
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    @media (max-width: 900px) {
+        .menu-toggle {
+            display: flex;
+        }
+        .mega-menu {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            padding: 1rem 0;
+            background: var(--bg);
+            border-top: 1px solid var(--border);
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        .mega-menu.open {
+            display: flex;
+        }
+        .mega-menu li {
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+        }
+        .mega-menu li:last-child {
+            border-bottom: none;
+        }
+        .mega-menu li .dropdown {
+            display: none;
+            background: var(--surface2);
+            padding: 0.5rem 0;
+        }
+        .mega-menu li .dropdown a {
+            padding: 0.5rem 1rem;
+            display: block;
+            font-size: 0.9rem;
+        }
+        .mega-menu li:hover .dropdown {
+            display: none; /* prevent hover on mobile */
+        }
+        /* On mobile, show dropdown when parent is clicked? */
+        /* For simplicity, we keep dropdown items visible on mobile? We'll rely on the parent link. */
+        /* Better: on mobile, dropdown items can be shown as submenu items without dropdown. */
+        .mega-menu li a {
+            padding: 12px 0;
+            display: block;
+            width: 100%;
+        }
+        .nav-inner {
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-size: 1.2rem;
+        }
+        .nav-cta {
+            font-size: 12px !important;
+            padding: 6px 12px !important;
+        }
+    }
+</style>
+<!-- ═══ MOBILE MENU TOGGLE SCRIPT ═══ -->
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('megaMenu');
+        const toggle = document.querySelector('.menu-toggle');
+        menu.classList.toggle('open');
+        toggle.classList.toggle('active');
+    }
+
+    // Close menu when a link is clicked (better UX)
+    document.addEventListener('DOMContentLoaded', function() {
+        const links = document.querySelectorAll('.mega-menu a');
+        links.forEach(link => {
+            link.addEventListener('click', function() {
+                const menu = document.getElementById('megaMenu');
+                const toggle = document.querySelector('.menu-toggle');
+                if (menu.classList.contains('open')) {
+                    menu.classList.remove('open');
+                    toggle.classList.remove('active');
+                }
+            });
+        });
+    });
+</script>
+<!-- ═══ MOBILE MENU STYLES (if not already in style.css) ═══ -->
+<style>
+    /* Ensure these styles are also in style.css, but include here as fallback */
+    .menu-toggle {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+        z-index: 101;
+    }
+    .menu-toggle span {
+        display: block;
+        width: 28px;
+        height: 3px;
+        background: var(--text);
+        border-radius: 3px;
+        transition: 0.3s;
+    }
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    @media (max-width: 900px) {
+        .menu-toggle {
+            display: flex;
+        }
+        .mega-menu {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            padding: 1rem 0;
+            background: var(--bg);
+            border-top: 1px solid var(--border);
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        .mega-menu.open {
+            display: flex;
+        }
+        .mega-menu li {
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+        }
+        .mega-menu li:last-child {
+            border-bottom: none;
+        }
+        .mega-menu li .dropdown {
+            display: none;
+            background: var(--surface2);
+            padding: 0.5rem 0;
+        }
+        .mega-menu li .dropdown a {
+            padding: 0.5rem 1rem;
+            display: block;
+            font-size: 0.9rem;
+        }
+        .mega-menu li:hover .dropdown {
+            display: none; /* prevent hover on mobile */
+        }
+        /* On mobile, show dropdown when parent is clicked? */
+        /* For simplicity, we keep dropdown items visible on mobile? We'll rely on the parent link. */
+        /* Better: on mobile, dropdown items can be shown as submenu items without dropdown. */
+        .mega-menu li a {
+            padding: 12px 0;
+            display: block;
+            width: 100%;
+        }
+        .nav-inner {
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-size: 1.2rem;
+        }
+        .nav-cta {
+            font-size: 12px !important;
+            padding: 6px 12px !important;
+        }
+    }
+</style>
+<!-- ═══ MOBILE MENU TOGGLE SCRIPT ═══ -->
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('megaMenu');
+        const toggle = document.querySelector('.menu-toggle');
+        menu.classList.toggle('open');
+        toggle.classList.toggle('active');
+    }
+
+    // Close menu when a link is clicked (better UX)
+    document.addEventListener('DOMContentLoaded', function() {
+        const links = document.querySelectorAll('.mega-menu a');
+        links.forEach(link => {
+            link.addEventListener('click', function() {
+                const menu = document.getElementById('megaMenu');
+                const toggle = document.querySelector('.menu-toggle');
+                if (menu.classList.contains('open')) {
+                    menu.classList.remove('open');
+                    toggle.classList.remove('active');
+                }
+            });
+        });
+    });
+</script>
+<!-- ═══ MOBILE MENU STYLES (if not already in style.css) ═══ -->
+<style>
+    /* Ensure these styles are also in style.css, but include here as fallback */
+    .menu-toggle {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+        z-index: 101;
+    }
+    .menu-toggle span {
+        display: block;
+        width: 28px;
+        height: 3px;
+        background: var(--text);
+        border-radius: 3px;
+        transition: 0.3s;
+    }
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    @media (max-width: 900px) {
+        .menu-toggle {
+            display: flex;
+        }
+        .mega-menu {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            padding: 1rem 0;
+            background: var(--bg);
+            border-top: 1px solid var(--border);
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        .mega-menu.open {
+            display: flex;
+        }
+        .mega-menu li {
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+        }
+        .mega-menu li:last-child {
+            border-bottom: none;
+        }
+        .mega-menu li .dropdown {
+            display: none;
+            background: var(--surface2);
+            padding: 0.5rem 0;
+        }
+        .mega-menu li .dropdown a {
+            padding: 0.5rem 1rem;
+            display: block;
+            font-size: 0.9rem;
+        }
+        .mega-menu li:hover .dropdown {
+            display: none; /* prevent hover on mobile */
+        }
+        /* On mobile, show dropdown when parent is clicked? */
+        /* For simplicity, we keep dropdown items visible on mobile? We'll rely on the parent link. */
+        /* Better: on mobile, dropdown items can be shown as submenu items without dropdown. */
+        .mega-menu li a {
+            padding: 12px 0;
+            display: block;
+            width: 100%;
+        }
+        .nav-inner {
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-size: 1.2rem;
+        }
+        .nav-cta {
+            font-size: 12px !important;
+            padding: 6px 12px !important;
+        }
+    }
+</style>
+<!-- ═══ MOBILE MENU TOGGLE SCRIPT ═══ -->
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('megaMenu');
+        const toggle = document.querySelector('.menu-toggle');
+        menu.classList.toggle('open');
+        toggle.classList.toggle('active');
+    }
+
+    // Close menu when a link is clicked (better UX)
+    document.addEventListener('DOMContentLoaded', function() {
+        const links = document.querySelectorAll('.mega-menu a');
+        links.forEach(link => {
+            link.addEventListener('click', function() {
+                const menu = document.getElementById('megaMenu');
+                const toggle = document.querySelector('.menu-toggle');
+                if (menu.classList.contains('open')) {
+                    menu.classList.remove('open');
+                    toggle.classList.remove('active');
+                }
+            });
+        });
+    });
+</script>
+<!-- ═══ MOBILE MENU STYLES (if not already in style.css) ═══ -->
+<style>
+    /* Ensure these styles are also in style.css, but include here as fallback */
+    .menu-toggle {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+        z-index: 101;
+    }
+    .menu-toggle span {
+        display: block;
+        width: 28px;
+        height: 3px;
+        background: var(--text);
+        border-radius: 3px;
+        transition: 0.3s;
+    }
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    @media (max-width: 900px) {
+        .menu-toggle {
+            display: flex;
+        }
+        .mega-menu {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            padding: 1rem 0;
+            background: var(--bg);
+            border-top: 1px solid var(--border);
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        .mega-menu.open {
+            display: flex;
+        }
+        .mega-menu li {
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+        }
+        .mega-menu li:last-child {
+            border-bottom: none;
+        }
+        .mega-menu li .dropdown {
+            display: none;
+            background: var(--surface2);
+            padding: 0.5rem 0;
+        }
+        .mega-menu li .dropdown a {
+            padding: 0.5rem 1rem;
+            display: block;
+            font-size: 0.9rem;
+        }
+        .mega-menu li:hover .dropdown {
+            display: none; /* prevent hover on mobile */
+        }
+        /* On mobile, show dropdown when parent is clicked? */
+        /* For simplicity, we keep dropdown items visible on mobile? We'll rely on the parent link. */
+        /* Better: on mobile, dropdown items can be shown as submenu items without dropdown. */
+        .mega-menu li a {
+            padding: 12px 0;
+            display: block;
+            width: 100%;
+        }
+        .nav-inner {
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-size: 1.2rem;
+        }
+        .nav-cta {
+            font-size: 12px !important;
+            padding: 6px 12px !important;
+        }
+    }
+</style>
+<!-- ═══ MOBILE MENU TOGGLE SCRIPT ═══ -->
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('megaMenu');
+        const toggle = document.querySelector('.menu-toggle');
+        menu.classList.toggle('open');
+        toggle.classList.toggle('active');
+    }
+
+    // Close menu when a link is clicked (better UX)
+    document.addEventListener('DOMContentLoaded', function() {
+        const links = document.querySelectorAll('.mega-menu a');
+        links.forEach(link => {
+            link.addEventListener('click', function() {
+                const menu = document.getElementById('megaMenu');
+                const toggle = document.querySelector('.menu-toggle');
+                if (menu.classList.contains('open')) {
+                    menu.classList.remove('open');
+                    toggle.classList.remove('active');
+                }
+            });
+        });
+    });
+</script>
+<!-- ═══ MOBILE MENU STYLES (if not already in style.css) ═══ -->
+<style>
+    /* Ensure these styles are also in style.css, but include here as fallback */
+    .menu-toggle {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+        z-index: 101;
+    }
+    .menu-toggle span {
+        display: block;
+        width: 28px;
+        height: 3px;
+        background: var(--text);
+        border-radius: 3px;
+        transition: 0.3s;
+    }
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    @media (max-width: 900px) {
+        .menu-toggle {
+            display: flex;
+        }
+        .mega-menu {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            padding: 1rem 0;
+            background: var(--bg);
+            border-top: 1px solid var(--border);
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        .mega-menu.open {
+            display: flex;
+        }
+        .mega-menu li {
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+        }
+        .mega-menu li:last-child {
+            border-bottom: none;
+        }
+        .mega-menu li .dropdown {
+            display: none;
+            background: var(--surface2);
+            padding: 0.5rem 0;
+        }
+        .mega-menu li .dropdown a {
+            padding: 0.5rem 1rem;
+            display: block;
+            font-size: 0.9rem;
+        }
+        .mega-menu li:hover .dropdown {
+            display: none; /* prevent hover on mobile */
+        }
+        /* On mobile, show dropdown when parent is clicked? */
+        /* For simplicity, we keep dropdown items visible on mobile? We'll rely on the parent link. */
+        /* Better: on mobile, dropdown items can be shown as submenu items without dropdown. */
+        .mega-menu li a {
+            padding: 12px 0;
+            display: block;
+            width: 100%;
+        }
+        .nav-inner {
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-size: 1.2rem;
+        }
+        .nav-cta {
+            font-size: 12px !important;
+            padding: 6px 12px !important;
+        }
+    }
+</style>
+<!-- ═══ MOBILE MENU TOGGLE SCRIPT ═══ -->
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('megaMenu');
+        const toggle = document.querySelector('.menu-toggle');
+        menu.classList.toggle('open');
+        toggle.classList.toggle('active');
+    }
+
+    // Close menu when a link is clicked (better UX)
+    document.addEventListener('DOMContentLoaded', function() {
+        const links = document.querySelectorAll('.mega-menu a');
+        links.forEach(link => {
+            link.addEventListener('click', function() {
+                const menu = document.getElementById('megaMenu');
+                const toggle = document.querySelector('.menu-toggle');
+                if (menu.classList.contains('open')) {
+                    menu.classList.remove('open');
+                    toggle.classList.remove('active');
+                }
+            });
+        });
+    });
+</script>
+<!-- ═══ MOBILE MENU STYLES (if not already in style.css) ═══ -->
+<style>
+    /* Ensure these styles are also in style.css, but include here as fallback */
+    .menu-toggle {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+        z-index: 101;
+    }
+    .menu-toggle span {
+        display: block;
+        width: 28px;
+        height: 3px;
+        background: var(--text);
+        border-radius: 3px;
+        transition: 0.3s;
+    }
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    @media (max-width: 900px) {
+        .menu-toggle {
+            display: flex;
+        }
+        .mega-menu {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            padding: 1rem 0;
+            background: var(--bg);
+            border-top: 1px solid var(--border);
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        .mega-menu.open {
+            display: flex;
+        }
+        .mega-menu li {
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+        }
+        .mega-menu li:last-child {
+            border-bottom: none;
+        }
+        .mega-menu li .dropdown {
+            display: none;
+            background: var(--surface2);
+            padding: 0.5rem 0;
+        }
+        .mega-menu li .dropdown a {
+            padding: 0.5rem 1rem;
+            display: block;
+            font-size: 0.9rem;
+        }
+        .mega-menu li:hover .dropdown {
+            display: none; /* prevent hover on mobile */
+        }
+        /* On mobile, show dropdown when parent is clicked? */
+        /* For simplicity, we keep dropdown items visible on mobile? We'll rely on the parent link. */
+        /* Better: on mobile, dropdown items can be shown as submenu items without dropdown. */
+        .mega-menu li a {
+            padding: 12px 0;
+            display: block;
+            width: 100%;
+        }
+        .nav-inner {
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-size: 1.2rem;
+        }
+        .nav-cta {
+            font-size: 12px !important;
+            padding: 6px 12px !important;
+        }
+    }
+</style>
+<!-- ═══ MOBILE MENU TOGGLE SCRIPT ═══ -->
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('megaMenu');
+        const toggle = document.querySelector('.menu-toggle');
+        menu.classList.toggle('open');
+        toggle.classList.toggle('active');
+    }
+
+    // Close menu when a link is clicked (better UX)
+    document.addEventListener('DOMContentLoaded', function() {
+        const links = document.querySelectorAll('.mega-menu a');
+        links.forEach(link => {
+            link.addEventListener('click', function() {
+                const menu = document.getElementById('megaMenu');
+                const toggle = document.querySelector('.menu-toggle');
+                if (menu.classList.contains('open')) {
+                    menu.classList.remove('open');
+                    toggle.classList.remove('active');
+                }
+            });
+        });
+    });
+</script>
+<!-- ═══ MOBILE MENU STYLES (if not already in style.css) ═══ -->
+<style>
+    /* Ensure these styles are also in style.css, but include here as fallback */
+    .menu-toggle {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+        z-index: 101;
+    }
+    .menu-toggle span {
+        display: block;
+        width: 28px;
+        height: 3px;
+        background: var(--text);
+        border-radius: 3px;
+        transition: 0.3s;
+    }
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    @media (max-width: 900px) {
+        .menu-toggle {
+            display: flex;
+        }
+        .mega-menu {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            padding: 1rem 0;
+            background: var(--bg);
+            border-top: 1px solid var(--border);
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        .mega-menu.open {
+            display: flex;
+        }
+        .mega-menu li {
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+        }
+        .mega-menu li:last-child {
+            border-bottom: none;
+        }
+        .mega-menu li .dropdown {
+            display: none;
+            background: var(--surface2);
+            padding: 0.5rem 0;
+        }
+        .mega-menu li .dropdown a {
+            padding: 0.5rem 1rem;
+            display: block;
+            font-size: 0.9rem;
+        }
+        .mega-menu li:hover .dropdown {
+            display: none; /* prevent hover on mobile */
+        }
+        /* On mobile, show dropdown when parent is clicked? */
+        /* For simplicity, we keep dropdown items visible on mobile? We'll rely on the parent link. */
+        /* Better: on mobile, dropdown items can be shown as submenu items without dropdown. */
+        .mega-menu li a {
+            padding: 12px 0;
+            display: block;
+            width: 100%;
+        }
+        .nav-inner {
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-size: 1.2rem;
+        }
+        .nav-cta {
+            font-size: 12px !important;
+            padding: 6px 12px !important;
+        }
+    }
+</style>
+<!-- ═══ MOBILE MENU TOGGLE SCRIPT ═══ -->
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('megaMenu');
+        const toggle = document.querySelector('.menu-toggle');
+        menu.classList.toggle('open');
+        toggle.classList.toggle('active');
+    }
+
+    // Close menu when a link is clicked (better UX)
+    document.addEventListener('DOMContentLoaded', function() {
+        const links = document.querySelectorAll('.mega-menu a');
+        links.forEach(link => {
+            link.addEventListener('click', function() {
+                const menu = document.getElementById('megaMenu');
+                const toggle = document.querySelector('.menu-toggle');
+                if (menu.classList.contains('open')) {
+                    menu.classList.remove('open');
+                    toggle.classList.remove('active');
+                }
+            });
+        });
+    });
+</script>
+<!-- ═══ MOBILE MENU STYLES (if not already in style.css) ═══ -->
+<style>
+    /* Ensure these styles are also in style.css, but include here as fallback */
+    .menu-toggle {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+        z-index: 101;
+    }
+    .menu-toggle span {
+        display: block;
+        width: 28px;
+        height: 3px;
+        background: var(--text);
+        border-radius: 3px;
+        transition: 0.3s;
+    }
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    @media (max-width: 900px) {
+        .menu-toggle {
+            display: flex;
+        }
+        .mega-menu {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            padding: 1rem 0;
+            background: var(--bg);
+            border-top: 1px solid var(--border);
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        .mega-menu.open {
+            display: flex;
+        }
+        .mega-menu li {
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+        }
+        .mega-menu li:last-child {
+            border-bottom: none;
+        }
+        .mega-menu li .dropdown {
+            display: none;
+            background: var(--surface2);
+            padding: 0.5rem 0;
+        }
+        .mega-menu li .dropdown a {
+            padding: 0.5rem 1rem;
+            display: block;
+            font-size: 0.9rem;
+        }
+        .mega-menu li:hover .dropdown {
+            display: none; /* prevent hover on mobile */
+        }
+        /* On mobile, show dropdown when parent is clicked? */
+        /* For simplicity, we keep dropdown items visible on mobile? We'll rely on the parent link. */
+        /* Better: on mobile, dropdown items can be shown as submenu items without dropdown. */
+        .mega-menu li a {
+            padding: 12px 0;
+            display: block;
+            width: 100%;
+        }
+        .nav-inner {
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-size: 1.2rem;
+        }
+        .nav-cta {
+            font-size: 12px !important;
+            padding: 6px 12px !important;
+        }
+    }
+</style>
+<!-- ═══ MOBILE MENU TOGGLE SCRIPT ═══ -->
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('megaMenu');
+        const toggle = document.querySelector('.menu-toggle');
+        menu.classList.toggle('open');
+        toggle.classList.toggle('active');
+    }
+
+    // Close menu when a link is clicked (better UX)
+    document.addEventListener('DOMContentLoaded', function() {
+        const links = document.querySelectorAll('.mega-menu a');
+        links.forEach(link => {
+            link.addEventListener('click', function() {
+                const menu = document.getElementById('megaMenu');
+                const toggle = document.querySelector('.menu-toggle');
+                if (menu.classList.contains('open')) {
+                    menu.classList.remove('open');
+                    toggle.classList.remove('active');
+                }
+            });
+        });
+    });
+</script>
+<!-- ═══ MOBILE MENU STYLES (if not already in style.css) ═══ -->
+<style>
+    /* Ensure these styles are also in style.css, but include here as fallback */
+    .menu-toggle {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+        z-index: 101;
+    }
+    .menu-toggle span {
+        display: block;
+        width: 28px;
+        height: 3px;
+        background: var(--text);
+        border-radius: 3px;
+        transition: 0.3s;
+    }
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    @media (max-width: 900px) {
+        .menu-toggle {
+            display: flex;
+        }
+        .mega-menu {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            padding: 1rem 0;
+            background: var(--bg);
+            border-top: 1px solid var(--border);
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        .mega-menu.open {
+            display: flex;
+        }
+        .mega-menu li {
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+        }
+        .mega-menu li:last-child {
+            border-bottom: none;
+        }
+        .mega-menu li .dropdown {
+            display: none;
+            background: var(--surface2);
+            padding: 0.5rem 0;
+        }
+        .mega-menu li .dropdown a {
+            padding: 0.5rem 1rem;
+            display: block;
+            font-size: 0.9rem;
+        }
+        .mega-menu li:hover .dropdown {
+            display: none; /* prevent hover on mobile */
+        }
+        /* On mobile, show dropdown when parent is clicked? */
+        /* For simplicity, we keep dropdown items visible on mobile? We'll rely on the parent link. */
+        /* Better: on mobile, dropdown items can be shown as submenu items without dropdown. */
+        .mega-menu li a {
+            padding: 12px 0;
+            display: block;
+            width: 100%;
+        }
+        .nav-inner {
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-size: 1.2rem;
+        }
+        .nav-cta {
+            font-size: 12px !important;
+            padding: 6px 12px !important;
+        }
+    }
+</style>
+<!-- ═══ MOBILE MENU TOGGLE SCRIPT ═══ -->
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('megaMenu');
+        const toggle = document.querySelector('.menu-toggle');
+        menu.classList.toggle('open');
+        toggle.classList.toggle('active');
+    }
+
+    // Close menu when a link is clicked (better UX)
+    document.addEventListener('DOMContentLoaded', function() {
+        const links = document.querySelectorAll('.mega-menu a');
+        links.forEach(link => {
+            link.addEventListener('click', function() {
+                const menu = document.getElementById('megaMenu');
+                const toggle = document.querySelector('.menu-toggle');
+                if (menu.classList.contains('open')) {
+                    menu.classList.remove('open');
+                    toggle.classList.remove('active');
+                }
+            });
+        });
+    });
+</script>
+<!-- ═══ MOBILE MENU STYLES (if not already in style.css) ═══ -->
+<style>
+    /* Ensure these styles are also in style.css, but include here as fallback */
+    .menu-toggle {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+        z-index: 101;
+    }
+    .menu-toggle span {
+        display: block;
+        width: 28px;
+        height: 3px;
+        background: var(--text);
+        border-radius: 3px;
+        transition: 0.3s;
+    }
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    @media (max-width: 900px) {
+        .menu-toggle {
+            display: flex;
+        }
+        .mega-menu {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            padding: 1rem 0;
+            background: var(--bg);
+            border-top: 1px solid var(--border);
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        .mega-menu.open {
+            display: flex;
+        }
+        .mega-menu li {
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+        }
+        .mega-menu li:last-child {
+            border-bottom: none;
+        }
+        .mega-menu li .dropdown {
+            display: none;
+            background: var(--surface2);
+            padding: 0.5rem 0;
+        }
+        .mega-menu li .dropdown a {
+            padding: 0.5rem 1rem;
+            display: block;
+            font-size: 0.9rem;
+        }
+        .mega-menu li:hover .dropdown {
+            display: none; /* prevent hover on mobile */
+        }
+        /* On mobile, show dropdown when parent is clicked? */
+        /* For simplicity, we keep dropdown items visible on mobile? We'll rely on the parent link. */
+        /* Better: on mobile, dropdown items can be shown as submenu items without dropdown. */
+        .mega-menu li a {
+            padding: 12px 0;
+            display: block;
+            width: 100%;
+        }
+        .nav-inner {
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-size: 1.2rem;
+        }
+        .nav-cta {
+            font-size: 12px !important;
+            padding: 6px 12px !important;
+        }
+    }
+</style>
+<!-- ═══ MOBILE MENU TOGGLE SCRIPT ═══ -->
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('megaMenu');
+        const toggle = document.querySelector('.menu-toggle');
+        menu.classList.toggle('open');
+        toggle.classList.toggle('active');
+    }
+
+    // Close menu when a link is clicked (better UX)
+    document.addEventListener('DOMContentLoaded', function() {
+        const links = document.querySelectorAll('.mega-menu a');
+        links.forEach(link => {
+            link.addEventListener('click', function() {
+                const menu = document.getElementById('megaMenu');
+                const toggle = document.querySelector('.menu-toggle');
+                if (menu.classList.contains('open')) {
+                    menu.classList.remove('open');
+                    toggle.classList.remove('active');
+                }
+            });
+        });
+    });
+</script>
+<!-- ═══ MOBILE MENU STYLES (if not already in style.css) ═══ -->
+<style>
+    /* Ensure these styles are also in style.css, but include here as fallback */
+    .menu-toggle {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+        z-index: 101;
+    }
+    .menu-toggle span {
+        display: block;
+        width: 28px;
+        height: 3px;
+        background: var(--text);
+        border-radius: 3px;
+        transition: 0.3s;
+    }
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    @media (max-width: 900px) {
+        .menu-toggle {
+            display: flex;
+        }
+        .mega-menu {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            padding: 1rem 0;
+            background: var(--bg);
+            border-top: 1px solid var(--border);
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        .mega-menu.open {
+            display: flex;
+        }
+        .mega-menu li {
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+        }
+        .mega-menu li:last-child {
+            border-bottom: none;
+        }
+        .mega-menu li .dropdown {
+            display: none;
+            background: var(--surface2);
+            padding: 0.5rem 0;
+        }
+        .mega-menu li .dropdown a {
+            padding: 0.5rem 1rem;
+            display: block;
+            font-size: 0.9rem;
+        }
+        .mega-menu li:hover .dropdown {
+            display: none; /* prevent hover on mobile */
+        }
+        /* On mobile, show dropdown when parent is clicked? */
+        /* For simplicity, we keep dropdown items visible on mobile? We'll rely on the parent link. */
+        /* Better: on mobile, dropdown items can be shown as submenu items without dropdown. */
+        .mega-menu li a {
+            padding: 12px 0;
+            display: block;
+            width: 100%;
+        }
+        .nav-inner {
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-size: 1.2rem;
+        }
+        .nav-cta {
+            font-size: 12px !important;
+            padding: 6px 12px !important;
+        }
+    }
+</style>
+<!-- ═══ MOBILE MENU TOGGLE SCRIPT ═══ -->
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('megaMenu');
+        const toggle = document.querySelector('.menu-toggle');
+        menu.classList.toggle('open');
+        toggle.classList.toggle('active');
+    }
+
+    // Close menu when a link is clicked (better UX)
+    document.addEventListener('DOMContentLoaded', function() {
+        const links = document.querySelectorAll('.mega-menu a');
+        links.forEach(link => {
+            link.addEventListener('click', function() {
+                const menu = document.getElementById('megaMenu');
+                const toggle = document.querySelector('.menu-toggle');
+                if (menu.classList.contains('open')) {
+                    menu.classList.remove('open');
+                    toggle.classList.remove('active');
+                }
+            });
+        });
+    });
+</script>
+<!-- ═══ MOBILE MENU STYLES (if not already in style.css) ═══ -->
+<style>
+    /* Ensure these styles are also in style.css, but include here as fallback */
+    .menu-toggle {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+        z-index: 101;
+    }
+    .menu-toggle span {
+        display: block;
+        width: 28px;
+        height: 3px;
+        background: var(--text);
+        border-radius: 3px;
+        transition: 0.3s;
+    }
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    @media (max-width: 900px) {
+        .menu-toggle {
+            display: flex;
+        }
+        .mega-menu {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            padding: 1rem 0;
+            background: var(--bg);
+            border-top: 1px solid var(--border);
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        .mega-menu.open {
+            display: flex;
+        }
+        .mega-menu li {
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+        }
+        .mega-menu li:last-child {
+            border-bottom: none;
+        }
+        .mega-menu li .dropdown {
+            display: none;
+            background: var(--surface2);
+            padding: 0.5rem 0;
+        }
+        .mega-menu li .dropdown a {
+            padding: 0.5rem 1rem;
+            display: block;
+            font-size: 0.9rem;
+        }
+        .mega-menu li:hover .dropdown {
+            display: none; /* prevent hover on mobile */
+        }
+        /* On mobile, show dropdown when parent is clicked? */
+        /* For simplicity, we keep dropdown items visible on mobile? We'll rely on the parent link. */
+        /* Better: on mobile, dropdown items can be shown as submenu items without dropdown. */
+        .mega-menu li a {
+            padding: 12px 0;
+            display: block;
+            width: 100%;
+        }
+        .nav-inner {
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-size: 1.2rem;
+        }
+        .nav-cta {
+            font-size: 12px !important;
+            padding: 6px 12px !important;
+        }
+    }
+</style>
+<div class="container">
+<!-- Challenge Header -->
+<div class="challenge-header">
+<h1>🔥 Daily Challenge</h1>
+<p>Test yourself with 5 random questions. Every day is a new opportunity to learn!</p>
+<div class="streak-badge">📅 6-Day Streak</div>
+</div>
+<!-- Test Container (populated by test-player.js) -->
+<div id="test-container">
+<p style="text-align:center; color:var(--text-mid); padding:2rem;">Loading today's challenge...</p>
+</div>
+<a class="back-link" href="/assessment.html">← Back to Assessment Center</a>
+</div>
+<!-- Load the daily challenge questions -->
+<script>
+        (function() {
+            const container = document.getElementById('test-container');
+            if (!container) return;
+
+            // Fetch questions from the master question bank
+            async function loadDailyChallenge() {
+                try {
+                    const response = await fetch('/question-bank.json');
+                    if (!response.ok) throw new Error('Failed to load question bank');
+                    const data = await response.json();
+                    const allQuestions = data.questions || [];
+                    
+                    if (allQuestions.length === 0) {
+                        container.innerHTML = `
+                            <p style="color:var(--text-mid); text-align:center; padding:2rem;">
+                                ⚠️ No questions available for today's challenge. Please check back later!
+                            </p>
+                        `;
+                        return;
+                    }
+                    
+                    // Shuffle and pick 5 random questions
+                    const shuffled = allQuestions.sort(() => 0.5 - Math.random());
+                    const selected = shuffled.slice(0, 5);
+                    
+                    // Set the questions for the test player
+                    window.TEST_QUESTIONS = selected;
+                    window.TEST_TITLE = "🔥 Daily Challenge";
+                    window.TEST_TAG = "daily";
+                    
+                    // Load the test player
+                    const script = document.createElement('script');
+                    script.src = '/test-player.js';
+                    script.onload = function() {
+                        // test-player.js should auto-render when TEST_QUESTIONS is set
+                        if (typeof renderTest === 'function') {
+                            renderTest();
+                        }
+                    };
+                    script.onerror = function() {
+                        container.innerHTML = `
+                            <p style="color:var(--red); text-align:center; padding:2rem;">
+                                ⚠️ Error loading the test player. Please try again later.
+                            </p>
+                        `;
+                    };
+                    document.body.appendChild(script);
+                } catch (error) {
+                    container.innerHTML = `
+                        <p style="color:var(--red); text-align:center; padding:2rem;">
+                            ⚠️ Could not load questions. Please try again later.
+                        </p>
+                    `;
+                }
+            }
+
+            loadDailyChallenge();
+        })();
+    </script>
+<footer class="site-footer">
+<p><strong style="color:var(--gold);">অভিধান</strong> — English to Bangla Dictionary, Grammar, Vocabulary &amp; BCS Preparation</p>
+<p>
+<a href="/">Home</a>  • 
+        <a href="/grammar.html">Grammar</a>  • 
+        <a href="/tools.html">Tools</a>  • 
+        <a href="/blog.html">Blog</a>  • 
+        <a href="/dictionary.html">Dictionary</a>  • 
+        <a href="https://play.google.com/store/apps/details?id=com.ovidhan.dictionary">Download App</a>  • 
+        <a href="/privacy.html">Privacy Policy</a>
+</p>
+<p style="margin-top:12px;">© 2026 অভিধান • Made with ❤️ for Bangladesh 🇧🇩</p>
+</footer></body>
+</html>

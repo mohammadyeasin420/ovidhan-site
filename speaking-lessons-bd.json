@@ -1,0 +1,902 @@
+[
+  {
+    "id": "bd-delivery-001",
+    "category": "bangladesh",
+    "title": "Talking to a Delivery Rider",
+    "level": "A2",
+    "objectives": ["Ask for delivery time", "Confirm address", "Receive the parcel"],
+    "context_bn": "আপনি একটি অনলাইন অর্ডার করছেন এবং ডেলিভারি রাইডারের সাথে কথা বলছেন।",
+    "dialogues": [
+      {"speaker": "Rider", "en": "Hello, I have a parcel for you. Are you at home?", "bn": "হ্যালো, আপনার জন্য একটি পার্সেল আছে। আপনি কি বাড়িতে আছেন?"},
+      {"speaker": "You", "en": "Yes, I'm at home. Please come to the gate.", "bn": "হ্যাঁ, আমি বাড়িতে আছি। অনুগ্রহ করে গেটে আসুন।"}
+    ],
+    "vocab": [{"word": "Parcel", "meaning": "পার্সেল"}, {"word": "Gate", "meaning": "গেট"}],
+    "grammar_tip": "Use 'Are you at home?' to check someone's location.",
+    "pronunciation_tip": "Say 'parcel' as /ˈpɑːsl/.",
+    "key_phrases": ["I have a parcel for you.", "Are you at home?"],
+    "quiz": [{"question": "What does the rider have for you?", "options": ["A letter", "A parcel", "A bill"], "correct": 1}],
+    "xp": 15
+  },
+  {
+    "id": "bd-bank-002",
+    "category": "bangladesh",
+    "title": "Opening a Bank Account in Bangladesh",
+    "level": "B1",
+    "objectives": ["Ask about account types", "Provide documents", "Fill forms"],
+    "context_bn": "আপনি বাংলাদেশের একটি ব্যাংকে অ্যাকাউন্ট খুলতে গেছেন।",
+    "dialogues": [
+      {"speaker": "You", "en": "I would like to open a savings account.", "bn": "আমি একটি সঞ্চয়ী হিসাব খুলতে চাই।"},
+      {"speaker": "Manager", "en": "Please provide your NID and a passport photo.", "bn": "আপনার এনআইডি এবং একটি পাসপোর্ট ছবি প্রদান করুন।"}
+    ],
+    "vocab": [{"word": "Savings account", "meaning": "সঞ্চয়ী হিসাব"}, {"word": "NID", "meaning": "জাতীয় পরিচয়পত্র"}],
+    "grammar_tip": "Use 'I would like to ...' for formal requests.",
+    "pronunciation_tip": "Say 'account' as /əˈkaʊnt/.",
+    "key_phrases": ["I would like to open a savings account.", "Please provide your NID and a passport photo."],
+    "quiz": [{"question": "What documents do you need to open an account?", "options": ["NID and photo", "Only passport", "Only birth certificate"], "correct": 0}],
+    "xp": 20
+  },
+  {
+    "id": "bd-electricity-003",
+    "category": "bangladesh",
+    "title": "Asking About Electricity Bills",
+    "level": "B1",
+    "objectives": ["Ask about bill amount", "Understand payment methods", "Inquire about due date"],
+    "context_bn": "আপনি বিদ্যুৎ বিল নিয়ে জিজ্ঞাসা করছেন।",
+    "dialogues": [
+      {"speaker": "You", "en": "How much is my electricity bill this month?", "bn": "এ মাসে আমার বিদ্যুৎ বিল কত?"},
+      {"speaker": "Officer", "en": "Your bill is 2,500 taka. You can pay online or at the bank.", "bn": "আপনার বিল ২,৫০০ টাকা। আপনি অনলাইনে বা ব্যাংকে দিতে পারেন।"}
+    ],
+    "vocab": [{"word": "Electricity bill", "meaning": "বিদ্যুৎ বিল"}, {"word": "Due date", "meaning": "নির্ধারিত তারিখ"}],
+    "grammar_tip": "Use 'How much is my ... bill?' to ask about a bill.",
+    "pronunciation_tip": "Say 'electricity' as /ɪˌlekˈtrɪsəti/.",
+    "key_phrases": ["How much is my electricity bill this month?", "You can pay online or at the bank."],
+    "quiz": [{"question": "How much is the bill this month?", "options": ["2,000 taka", "2,500 taka", "3,000 taka"], "correct": 1}],
+    "xp": 20
+  },
+  {
+    "id": "bd-bkash-004",
+    "category": "bangladesh",
+    "title": "Sending Money via bKash/Nagad",
+    "level": "A2",
+    "objectives": ["Ask for recipient number", "Send money", "Confirm transaction"],
+    "context_bn": "আপনি bKash বা Nagad এর মাধ্যমে টাকা পাঠাচ্ছেন।",
+    "dialogues": [
+      {"speaker": "You", "en": "I want to send 500 taka to this number.", "bn": "আমি এই নম্বরে ৫০০ টাকা পাঠাতে চাই।"},
+      {"speaker": "Agent", "en": "Please confirm the recipient's name.", "bn": "অনুগ্রহ করে প্রাপকের নাম নিশ্চিত করুন।"}
+    ],
+    "vocab": [{"word": "Recipient", "meaning": "প্রাপক"}, {"word": "Confirm", "meaning": "নিশ্চিত করা"}],
+    "grammar_tip": "Use 'I want to send ... to ...' to state your intention.",
+    "pronunciation_tip": "Say 'recipient' as /rɪˈsɪpiənt/.",
+    "key_phrases": ["I want to send ... taka to this number.", "Please confirm the recipient's name."],
+    "quiz": [{"question": "What do you need to confirm when sending money?", "options": ["Recipient's name", "Your own name", "The amount"], "correct": 0}],
+    "xp": 15
+  },
+  {
+    "id": "bd-landlord-005",
+    "category": "bangladesh",
+    "title": "Talking to a Landlord",
+    "level": "B1",
+    "objectives": ["Ask about rent", "Discuss maintenance", "Negotiate terms"],
+    "context_bn": "আপনি আপনার বাড়িওয়ালার সাথে ভাড়া নিয়ে কথা বলছেন।",
+    "dialogues": [
+      {"speaker": "You", "en": "The rent is due next week. Can I pay a week late?", "bn": "ভাড়া আগামী সপ্তাহে দেয়া হবে। আমি কি এক সপ্তাহ পরে দিতে পারি?"},
+      {"speaker": "Landlord", "en": "That's fine, but please inform me in advance.", "bn": "ঠিক আছে, তবে অনুগ্রহ করে আগেই জানাবেন।"}
+    ],
+    "vocab": [{"word": "Rent", "meaning": "ভাড়া"}, {"word": "Due", "meaning": "নির্ধারিত"}],
+    "grammar_tip": "Use 'Can I ...?' to ask for permission.",
+    "pronunciation_tip": "Say 'rent' as /rent/.",
+    "key_phrases": ["The rent is due next week.", "Can I pay a week late?"],
+    "quiz": [{"question": "What does the tenant ask about?", "options": ["Paying late", "Repairs", "Moving out"], "correct": 0}],
+    "xp": 20
+  },
+  {
+    "id": "bd-customer-006",
+    "category": "bangladesh",
+    "title": "Complaining About a Utility Issue",
+    "level": "B1",
+    "objectives": ["Describe the problem", "Request a fix", "Follow up"],
+    "context_bn": "আপনি বিদ্যুৎ বা পানির সমস্যা নিয়ে অভিযোগ করছেন।",
+    "dialogues": [
+      {"speaker": "You", "en": "There is no electricity in my area for 3 hours.", "bn": "আমার এলাকায় ৩ ঘন্টা ধরে বিদ্যুৎ নেই।"},
+      {"speaker": "Rep", "en": "We are sending a team to check it now.", "bn": "আমরা এখন এটি পরীক্ষা করার জন্য একটি দল পাঠাচ্ছি।"}
+    ],
+    "vocab": [{"word": "Electricity", "meaning": "বিদ্যুৎ"}, {"word": "Team", "meaning": "দল"}],
+    "grammar_tip": "Use 'There is no ...' to describe a lack.",
+    "pronunciation_tip": "Say 'electricity' as /ɪˌlekˈtrɪsəti/.",
+    "key_phrases": ["There is no electricity in my area.", "We are sending a team to check it."],
+    "quiz": [{"question": "How long has there been no electricity?", "options": ["1 hour", "3 hours", "6 hours"], "correct": 1}],
+    "xp": 20
+  },
+  {
+    "id": "bd-hospital-007",
+    "category": "bangladesh",
+    "title": "Admitting a Patient to Hospital",
+    "level": "B1",
+    "objectives": ["Fill admission form", "Explain symptoms", "Ask about insurance"],
+    "context_bn": "আপনি হাসপাতালে একজন রোগী ভর্তি করছেন।",
+    "dialogues": [
+      {"speaker": "You", "en": "I need to admit my father. He has high fever.", "bn": "আমি আমার বাবাকে ভর্তি করতে চাই। তার খুব জ্বর।"},
+      {"speaker": "Staff", "en": "Please fill out this form and provide his NID.", "bn": "অনুগ্রহ করে এই ফর্মটি পূরণ করুন এবং তার এনআইডি দিন।"}
+    ],
+    "vocab": [{"word": "Admit", "meaning": "ভর্তি করা"}, {"word": "Fever", "meaning": "জ্বর"}],
+    "grammar_tip": "Use 'I need to admit ...' to state necessity.",
+    "pronunciation_tip": "Say 'admit' as /ədˈmɪt/.",
+    "key_phrases": ["I need to admit my father.", "Please fill out this form."],
+    "quiz": [{"question": "What document is required for admission?", "options": ["NID", "Passport", "License"], "correct": 0}],
+    "xp": 25
+  },
+  {
+    "id": "bd-police-008",
+    "category": "bangladesh",
+    "title": "Reporting a Lost Item to Police",
+    "level": "B1",
+    "objectives": ["Describe the lost item", "Give time and location", "Get a report"],
+    "context_bn": "আপনি একটি জিনিস হারিয়ে ফেলেছেন এবং পুলিশকে জানাচ্ছেন।",
+    "dialogues": [
+      {"speaker": "You", "en": "I lost my wallet at the bus station this morning.", "bn": "আমি আজ সকালে বাস স্টেশনে আমার ওয়ালেট হারিয়েছি।"},
+      {"speaker": "Officer", "en": "Please describe your wallet and write down your contact.", "bn": "অনুগ্রহ করে আপনার ওয়ালেটের বর্ণনা দিন এবং আপনার যোগাযোগ লিখুন।"}
+    ],
+    "vocab": [{"word": "Wallet", "meaning": "ওয়ালেট"}, {"word": "Contact", "meaning": "যোগাযোগ"}],
+    "grammar_tip": "Use 'I lost my ... at ...' to report loss.",
+    "pronunciation_tip": "Say 'wallet' as /ˈwɒlɪt/.",
+    "key_phrases": ["I lost my wallet at the bus station.", "Please describe your wallet."],
+    "quiz": [{"question": "Where did the person lose their wallet?", "options": ["Bus station", "Market", "Office"], "correct": 0}],
+    "xp": 20
+  },
+  {
+    "id": "bd-embassy-009",
+    "category": "bangladesh",
+    "title": "Applying for a Visa at the Embassy",
+    "level": "B1",
+    "objectives": ["Fill visa form", "Submit documents", "Attend interview"],
+    "context_bn": "আপনি বিদেশে যাওয়ার জন্য ভিসা আবেদন করছেন।",
+    "dialogues": [
+      {"speaker": "You", "en": "I would like to apply for a visitor visa.", "bn": "আমি একটি ভিজিটর ভিসার জন্য আবেদন করতে চাই।"},
+      {"speaker": "Officer", "en": "Please submit your passport and two photos.", "bn": "অনুগ্রহ করে আপনার পাসপোর্ট এবং দুটি ছবি জমা দিন।"}
+    ],
+    "vocab": [{"word": "Visitor visa", "meaning": "ভিজিটর ভিসা"}, {"word": "Passport", "meaning": "পাসপোর্ট"}],
+    "grammar_tip": "Use 'I would like to apply for ...' for formal requests.",
+    "pronunciation_tip": "Say 'visa' as /ˈviːzə/.",
+    "key_phrases": ["I would like to apply for a visitor visa.", "Please submit your passport and two photos."],
+    "quiz": [{"question": "What documents are needed for a visa application?", "options": ["Passport and photos", "NID only", "Birth certificate"], "correct": 0}],
+    "xp": 25
+  },
+  {
+    "id": "bd-mobile-010",
+    "category": "bangladesh",
+    "title": "Using Mobile Banking",
+    "level": "A2",
+    "objectives": ["Check balance", "Send money", "Pay bills"],
+    "context_bn": "আপনি মোবাইল ব্যাংকিং ব্যবহার করছেন।",
+    "dialogues": [
+      {"speaker": "You", "en": "I want to check my balance.", "bn": "আমি আমার ব্যালেন্স চেক করতে চাই।"},
+      {"speaker": "System", "en": "Your balance is 1,200 taka.", "bn": "আপনার ব্যালেন্স ১,২০০ টাকা।"}
+    ],
+    "vocab": [{"word": "Balance", "meaning": "ব্যালেন্স"}, {"word": "Check", "meaning": "চেক করা"}],
+    "grammar_tip": "Use 'I want to check my ...' to express intention.",
+    "pronunciation_tip": "Say 'balance' as /ˈbæləns/.",
+    "key_phrases": ["I want to check my balance.", "Your balance is ... taka."],
+    "quiz": [{"question": "What is the current balance?", "options": ["1,200 taka", "2,000 taka", "500 taka"], "correct": 0}],
+    "xp": 15
+  },
+  {
+    "id": "bd-office-011",
+    "category": "bangladesh",
+    "title": "Office English – Introducing Yourself",
+    "level": "A2",
+    "objectives": ["Greet colleagues", "Say your name and role", "Ask about others"],
+    "context_bn": "আপনি নতুন অফিসে নিজেকে পরিচয় দিচ্ছেন।",
+    "dialogues": [
+      {"speaker": "You", "en": "Hello, I'm Rafiq. I'm the new marketing manager.", "bn": "হ্যালো, আমি রফিক। আমি নতুন মার্কেটিং ম্যানেজার।"},
+      {"speaker": "Colleague", "en": "Nice to meet you, Rafiq. Welcome to the team.", "bn": "দেখে ভালো লাগলো, রফিক। টিমে স্বাগতম।"}
+    ],
+    "vocab": [{"word": "Marketing manager", "meaning": "মার্কেটিং ম্যানেজার"}, {"word": "Welcome", "meaning": "স্বাগতম"}],
+    "grammar_tip": "Use 'I'm ...' to introduce yourself.",
+    "pronunciation_tip": "Say 'manager' as /ˈmænɪdʒər/.",
+    "key_phrases": ["Hello, I'm ...", "Nice to meet you."],
+    "quiz": [{"question": "What is Rafiq's role?", "options": ["Marketing manager", "Sales manager", "HR manager"], "correct": 0}],
+    "xp": 10
+  },
+  {
+    "id": "bd-office-012",
+    "category": "bangladesh",
+    "title": "Office English – Asking for a Leave",
+    "level": "A2",
+    "objectives": ["Ask for leave", "Explain reason", "Get approval"],
+    "context_bn": "আপনি অফিসে ছুটির আবেদন করছেন।",
+    "dialogues": [
+      {"speaker": "You", "en": "Can I take a leave on Friday? I have a family function.", "bn": "আমি কি শুক্রবার ছুটি নিতে পারি? আমার একটি পারিবারিক অনুষ্ঠান আছে।"},
+      {"speaker": "Manager", "en": "Yes, you can. Please send a formal email.", "bn": "হ্যাঁ, নিতে পারেন। অনুগ্রহ করে একটি ফরমাল ইমেইল পাঠান।"}
+    ],
+    "vocab": [{"word": "Leave", "meaning": "ছুটি"}, {"word": "Function", "meaning": "অনুষ্ঠান"}],
+    "grammar_tip": "Use 'Can I take a leave on ...?' to request permission.",
+    "pronunciation_tip": "Say 'leave' as /liːv/.",
+    "key_phrases": ["Can I take a leave on ...?", "Please send a formal email."],
+    "quiz": [{"question": "Why does the person need leave?", "options": ["Family function", "Sickness", "Vacation"], "correct": 0}],
+    "xp": 15
+  },
+  {
+    "id": "bd-office-013",
+    "category": "bangladesh",
+    "title": "Office English – Making a Phone Call",
+    "level": "A2",
+    "objectives": ["Dial a number", "Ask to speak to someone", "Leave a message"],
+    "context_bn": "আপনি অফিসে ফোন করছেন একজন সহকর্মীকে।",
+    "dialogues": [
+      {"speaker": "You", "en": "Hello, can I speak to Mr. Hasan?", "bn": "হ্যালো, আমি কি মি. হাসানের সাথে কথা বলতে পারি?"},
+      {"speaker": "Receptionist", "en": "He is in a meeting. Can I take a message?", "bn": "তিনি একটি মিটিংয়ে আছেন। আমি কি একটি বার্তা নিতে পারি?"}
+    ],
+    "vocab": [{"word": "Message", "meaning": "বার্তা"}, {"word": "Meeting", "meaning": "মিটিং"}],
+    "grammar_tip": "Use 'Can I speak to ...?' to ask to talk to someone.",
+    "pronunciation_tip": "Say 'speak' as /spiːk/.",
+    "key_phrases": ["Can I speak to ...?", "Can I take a message?"],
+    "quiz": [{"question": "Why can't Mr. Hasan answer the phone?", "options": ["He is in a meeting", "He is on leave", "He is out"], "correct": 0}],
+    "xp": 15
+  },
+  {
+    "id": "bd-office-014",
+    "category": "bangladesh",
+    "title": "Office English – Scheduling a Meeting",
+    "level": "B1",
+    "objectives": ["Propose a time", "Suggest a date", "Confirm availability"],
+    "context_bn": "আপনি অফিসে একটি মিটিংয়ের সময় নির্ধারণ করছেন।",
+    "dialogues": [
+      {"speaker": "You", "en": "Would you be available on Monday at 10 am for a meeting?", "bn": "আপনি কি সোমবার সকাল ১০টায় একটি মিটিংয়ের জন্য উপলব্ধ?"},
+      {"speaker": "Colleague", "en": "Yes, that works for me. Let's confirm.", "bn": "হ্যাঁ, আমার জন্য কাজ করে। চলুন নিশ্চিত করি।"}
+    ],
+    "vocab": [{"word": "Available", "meaning": "উপলব্ধ"}, {"word": "Confirm", "meaning": "নিশ্চিত করা"}],
+    "grammar_tip": "Use 'Would you be available on ...?' to suggest a time.",
+    "pronunciation_tip": "Say 'available' as /əˈveɪləbl/.",
+    "key_phrases": ["Would you be available on ...?", "That works for me."],
+    "quiz": [{"question": "When is the meeting proposed?", "options": ["Monday at 10 am", "Tuesday at 10 am", "Monday at 2 pm"], "correct": 0}],
+    "xp": 20
+  },
+  {
+    "id": "bd-office-015",
+    "category": "bangladesh",
+    "title": "Office English – Giving a Status Update",
+    "level": "B1",
+    "objectives": ["Report progress", "Mention challenges", "Ask for feedback"],
+    "context_bn": "আপনি অফিসে আপনার প্রকল্পের অগ্রগতি সম্পর্কে রিপোর্ট করছেন।",
+    "dialogues": [
+      {"speaker": "You", "en": "Our team has completed 80% of the project. We are on schedule.", "bn": "আমাদের দল প্রকল্পের ৮০% সম্পন্ন করেছে। আমরা সময়মতো আছি।"},
+      {"speaker": "Manager", "en": "Great work. Let me know if you need more resources.", "bn": "দারুণ কাজ। আরও সম্পদের প্রয়োজন হলে আমাকে জানান।"}
+    ],
+    "vocab": [{"word": "Project", "meaning": "প্রকল্প"}, {"word": "Resources", "meaning": "সম্পদ"}],
+    "grammar_tip": "Use present perfect 'has completed' to show progress.",
+    "pronunciation_tip": "Say 'project' as /ˈprɒdʒɛkt/.",
+    "key_phrases": ["Our team has completed ...", "We are on schedule."],
+    "quiz": [{"question": "How much of the project is completed?", "options": ["60%", "80%", "100%"], "correct": 1}],
+    "xp": 20
+  },
+  {
+    "id": "bd-office-016",
+    "category": "bangladesh",
+    "title": "Office English – Negotiating a Deadline",
+    "level": "B1",
+    "objectives": ["Request extension", "Explain reason", "Propose new date"],
+    "context_bn": "আপনি অফিসে একটি ডেডলাইন বাড়ানোর জন্য অনুরোধ করছেন।",
+    "dialogues": [
+      {"speaker": "You", "en": "Could we extend the deadline by two days? We need more time.", "bn": "আমরা কি ডেডলাইন দু'দিন বাড়াতে পারি? আমাদের আরও সময় দরকার।"},
+      {"speaker": "Manager", "en": "Fine, but only two days. Please submit by Friday.", "bn": "ঠিক আছে, তবে শুধু দু'দিন। অনুগ্রহ করে শুক্রবারের মধ্যে জমা দিন।"}
+    ],
+    "vocab": [{"word": "Deadline", "meaning": "ডেডলাইন"}, {"word": "Extend", "meaning": "বাড়ানো"}],
+    "grammar_tip": "Use 'Could we extend ...?' for polite negotiation.",
+    "pronunciation_tip": "Say 'deadline' as /ˈdedlaɪn/.",
+    "key_phrases": ["Could we extend the deadline by ...?", "Please submit by ..."],
+    "quiz": [{"question": "How many days extension is requested?", "options": ["One day", "Two days", "Three days"], "correct": 1}],
+    "xp": 25
+  },
+  {
+    "id": "bd-office-017",
+    "category": "bangladesh",
+    "title": "Office English – Handling a Difficult Customer",
+    "level": "B1",
+    "objectives": ["Stay calm", "Listen to complaint", "Offer solution"],
+    "context_bn": "আপনি অফিসে একজন কঠিন গ্রাহকের সাথে কথা বলছেন।",
+    "dialogues": [
+      {"speaker": "Customer", "en": "I am very unhappy with your service!", "bn": "আমি আপনার সেবা নিয়ে খুবই অসন্তুষ্ট!"},
+      {"speaker": "You", "en": "I understand. Let me see how I can help you.", "bn": "আমি বুঝতে পারছি। আসুন দেখি কিভাবে আপনাকে সাহায্য করতে পারি।"}
+    ],
+    "vocab": [{"word": "Unhappy", "meaning": "অসন্তুষ্ট"}, {"word": "Service", "meaning": "সেবা"}],
+    "grammar_tip": "Use 'I understand' to show empathy.",
+    "pronunciation_tip": "Say 'service' as /ˈsɜːvɪs/.",
+    "key_phrases": ["I am very unhappy with your service!", "Let me see how I can help you."],
+    "quiz": [{"question": "How does the customer feel?", "options": ["Happy", "Unhappy", "Confused"], "correct": 1}],
+    "xp": 25
+  },
+  {
+    "id": "bd-student-018",
+    "category": "bangladesh",
+    "title": "Student English – Asking a Teacher a Question",
+    "level": "A2",
+    "objectives": ["Raise hand", "Ask question politely", "Listen to answer"],
+    "context_bn": "আপনি ক্লাসে শিক্ষককে একটি প্রশ্ন করছেন।",
+    "dialogues": [
+      {"speaker": "You", "en": "Excuse me, teacher. Could you explain this again?", "bn": "এক্সকিউজ মি, স্যার/ম্যাডাম। আপনি কি এটা আবার ব্যাখ্যা করতে পারেন?"},
+      {"speaker": "Teacher", "en": "Sure. Let me go over it one more time.", "bn": "অবশ্যই। আসুন আরেকবার দেখি।"}
+    ],
+    "vocab": [{"word": "Explain", "meaning": "ব্যাখ্যা করা"}, {"word": "Again", "meaning": "আবার"}],
+    "grammar_tip": "Use 'Could you ...?' for polite questions.",
+    "pronunciation_tip": "Say 'explain' as /ɪkˈspleɪn/.",
+    "key_phrases": ["Could you explain this again?", "Let me go over it one more time."],
+    "quiz": [{"question": "What does the student ask?", "options": ["For explanation", "For a break", "For homework"], "correct": 0}],
+    "xp": 15
+  },
+  {
+    "id": "bd-student-019",
+    "category": "bangladesh",
+    "title": "Student English – Giving a Presentation",
+    "level": "B1",
+    "objectives": ["Open presentation", "Present main points", "Answer questions"],
+    "context_bn": "আপনি কলেজে একটি প্রেজেন্টেশন দিচ্ছেন।",
+    "dialogues": [
+      {"speaker": "You", "en": "Today I will talk about climate change in Bangladesh.", "bn": "আজ আমি বাংলাদেশে জলবায়ু পরিবর্তন সম্পর্কে কথা বলব।"},
+      {"speaker": "Classmate", "en": "What are the main effects we are seeing?", "bn": "আমরা যে প্রধান প্রভাব দেখছি সেগুলো কী?"}
+    ],
+    "vocab": [{"word": "Climate change", "meaning": "জলবায়ু পরিবর্তন"}, {"word": "Effects", "meaning": "প্রভাব"}],
+    "grammar_tip": "Use 'Today I will talk about ...' to introduce a topic.",
+    "pronunciation_tip": "Say 'climate' as /ˈklaɪmət/.",
+    "key_phrases": ["Today I will talk about ...", "What are the main effects?"],
+    "quiz": [{"question": "What is the presentation about?", "options": ["Climate change", "Economy", "Technology"], "correct": 0}],
+    "xp": 20
+  },
+  {
+    "id": "bd-student-020",
+    "category": "bangladesh",
+    "title": "Student English – Participating in a Group Discussion",
+    "level": "B1",
+    "objectives": ["Express opinion", "Agree/disagree politely", "Summarize"],
+    "context_bn": "আপনি একটি গ্রুপ ডিসকাশনে অংশ নিচ্ছেন।",
+    "dialogues": [
+      {"speaker": "You", "en": "I think online education is very effective.", "bn": "আমি মনে করি অনলাইন শিক্ষা খুব কার্যকর।"},
+      {"speaker": "Peer", "en": "I agree, but we need better internet access.", "bn": "আমি একমত, তবে আমাদের আরও ভালো ইন্টারনেট অ্যাক্সেস দরকার।"}
+    ],
+    "vocab": [{"word": "Effective", "meaning": "কার্যকর"}, {"word": "Access", "meaning": "অ্যাক্সেস"}],
+    "grammar_tip": "Use 'I think ...' to state opinion.",
+    "pronunciation_tip": "Say 'effective' as /ɪˈfɛktɪv/.",
+    "key_phrases": ["I think ...", "I agree, but ..."],
+    "quiz": [{"question": "What is the speaker's opinion?", "options": ["Online education is effective", "Internet is cheap", "School is better"], "correct": 0}],
+    "xp": 15
+  },
+  {
+    "id": "bd-student-021",
+    "category": "bangladesh",
+    "title": "Student English – Asking About Exam Results",
+    "level": "A2",
+    "objectives": ["Ask about results", "Show concern", "Ask for clarification"],
+    "context_bn": "আপনি পরীক্ষার ফলাফল সম্পর্কে জিজ্ঞাসা করছেন।",
+    "dialogues": [
+      {"speaker": "You", "en": "When will the exam results be published?", "bn": "পরীক্ষার ফলাফল কখন প্রকাশিত হবে?"},
+      {"speaker": "Teacher", "en": "They will be out by next Monday.", "bn": "এগুলো পরবর্তী সোমবারের মধ্যে বেরিয়ে আসবে।"}
+    ],
+    "vocab": [{"word": "Results", "meaning": "ফলাফল"}, {"word": "Published", "meaning": "প্রকাশিত"}],
+    "grammar_tip": "Use 'When will ...?' to ask about future events.",
+    "pronunciation_tip": "Say 'results' as /rɪˈzʌlts/.",
+    "key_phrases": ["When will the exam results be published?", "They will be out by ..."],
+    "quiz": [{"question": "When will the results be published?", "options": ["By next Monday", "Today", "Next month"], "correct": 0}],
+    "xp": 15
+  },
+  {
+    "id": "bd-student-022",
+    "category": "bangladesh",
+    "title": "Student English – Applying for University Admission",
+    "level": "B1",
+    "objectives": ["Fill application form", "Ask about requirements", "Submit"],
+    "context_bn": "আপনি বিশ্ববিদ্যালয়ে ভর্তির আবেদন করছেন।",
+    "dialogues": [
+      {"speaker": "You", "en": "I want to apply for the Computer Science program.", "bn": "আমি কম্পিউটার সায়েন্স প্রোগ্রামে আবেদন করতে চাই।"},
+      {"speaker": "Admissions", "en": "Please submit your transcripts and recommendation letters.", "bn": "অনুগ্রহ করে আপনার ট্রান্সক্রিপ্ট এবং সুপারিশপত্র জমা দিন。"}
+    ],
+    "vocab": [{"word": "Program", "meaning": "প্রোগ্রাম"}, {"word": "Transcripts", "meaning": "ট্রান্সক্রিপ্ট"}],
+    "grammar_tip": "Use 'I want to apply for ...' to express intention.",
+    "pronunciation_tip": "Say 'transcripts' as /ˈtrænskrɪpts/.",
+    "key_phrases": ["I want to apply for ...", "Please submit your transcripts."],
+    "quiz": [{"question": "What documents are required for admission?", "options": ["Transcripts and recommendation letters", "Only transcripts", "Only recommendation letters"], "correct": 0}],
+    "xp": 20
+  },
+  {
+    "id": "bd-student-023",
+    "category": "bangladesh",
+    "title": "Student English – Talking About Career Goals",
+    "level": "A2",
+    "objectives": ["Discuss future plans", "Ask about others' goals", "Express ambition"],
+    "context_bn": "আপনি বন্ধুর সাথে আপনার ক্যারিয়ার পরিকল্পনা নিয়ে কথা বলছেন।",
+    "dialogues": [
+      {"speaker": "You", "en": "I want to become a software engineer.", "bn": "আমি একজন সফটওয়্যার ইঞ্জিনিয়ার হতে চাই।"},
+      {"speaker": "Friend", "en": "That's great. What skills do you need?", "bn": "এটা দারুণ। আপনার কী কী দক্ষতা দরকার?"}
+    ],
+    "vocab": [{"word": "Software engineer", "meaning": "সফটওয়্যার ইঞ্জিনিয়ার"}, {"word": "Skills", "meaning": "দক্ষতা"}],
+    "grammar_tip": "Use 'I want to become ...' to state career goal.",
+    "pronunciation_tip": "Say 'engineer' as /ˌɛndʒɪˈnɪər/.",
+    "key_phrases": ["I want to become a ...", "That's great. What skills do you need?"],
+    "quiz": [{"question": "What career does the person want?", "options": ["Software engineer", "Doctor", "Teacher"], "correct": 0}],
+    "xp": 15
+  },
+  {
+    "id": "bd-student-024",
+    "category": "bangladesh",
+    "title": "Student English – Asking for Help from a Librarian",
+    "level": "A2",
+    "objectives": ["Ask for book location", "Request assistance", "Thank"],
+    "context_bn": "আপনি লাইব্রেরিতে একজন গ্রন্থাগারিকের কাছে সাহায্য চাইছেন।",
+    "dialogues": [
+      {"speaker": "You", "en": "Excuse me, can you help me find this book?", "bn": "এক্সকিউজ মি, আপনি কি আমাকে এই বইটি খুঁজে পেতে সাহায্য করতে পারেন?"},
+      {"speaker": "Librarian", "en": "Sure, it's on the second floor, aisle 3.", "bn": "অবশ্যই, এটি দ্বিতীয় তলায়, আইল ৩-এ আছে।"}
+    ],
+    "vocab": [{"word": "Aisle", "meaning": "আইল"}, {"word": "Floor", "meaning": "তলা"}],
+    "grammar_tip": "Use 'Can you help me ...?' to request assistance.",
+    "pronunciation_tip": "Say 'aisle' as /aɪl/.",
+    "key_phrases": ["Can you help me find this book?", "It's on the second floor, aisle 3."],
+    "quiz": [{"question": "Where is the book located?", "options": ["Second floor, aisle 3", "First floor, aisle 1", "Third floor, aisle 5"], "correct": 0}],
+    "xp": 15
+  },
+  {
+    "id": "bd-community-025",
+    "category": "bangladesh",
+    "title": "Community English – Talking to a Neighbor",
+    "level": "A2",
+    "objectives": ["Greet", "Small talk", "Ask about family"],
+    "context_bn": "আপনি আপনার প্রতিবেশীর সাথে কথা বলছেন।",
+    "dialogues": [
+      {"speaker": "You", "en": "Good morning! How is your family?", "bn": "শুভ সকাল! আপনার পরিবার কেমন?"},
+      {"speaker": "Neighbor", "en": "They are well, thank you. And yours?", "bn": "তারা ভালো আছে, ধন্যবাদ। আপনার?"}
+    ],
+    "vocab": [{"word": "Neighbor", "meaning": "প্রতিবেশী"}, {"word": "Well", "meaning": "ভালো"}],
+    "grammar_tip": "Use 'How is your ...?' to ask about someone's family.",
+    "pronunciation_tip": "Say 'neighbor' as /ˈneɪbər/.",
+    "key_phrases": ["Good morning! How is your family?", "They are well, thank you."],
+    "quiz": [{"question": "What does the person ask about?", "options": ["Family", "Work", "Weather"], "correct": 0}],
+    "xp": 10
+  },
+  {
+    "id": "bd-community-026",
+    "category": "bangladesh",
+    "title": "Community English – Attending a Local Event",
+    "level": "A2",
+    "objectives": ["Ask about event details", "Buy ticket", "Enjoy"],
+    "context_bn": "আপনি একটি স্থানীয় অনুষ্ঠানে যোগ দিচ্ছেন।",
+    "dialogues": [
+      {"speaker": "You", "en": "What time does the event start?", "bn": "অনুষ্ঠান কখন শুরু হবে?"},
+      {"speaker": "Organizer", "en": "It starts at 6 pm. You can buy tickets at the gate.", "bn": "এটি সন্ধ্যা ৬টায় শুরু হবে। আপনি গেটে টিকিট কিনতে পারেন।"}
+    ],
+    "vocab": [{"word": "Event", "meaning": "অনুষ্ঠান"}, {"word": "Gate", "meaning": "গেট"}],
+    "grammar_tip": "Use 'What time does ... start?' to ask about starting time.",
+    "pronunciation_tip": "Say 'event' as /ɪˈvɛnt/.",
+    "key_phrases": ["What time does the event start?", "It starts at ..."],
+    "quiz": [{"question": "When does the event start?", "options": ["6 pm", "7 pm", "8 pm"], "correct": 0}],
+    "xp": 15
+  },
+  {
+    "id": "bd-community-027",
+    "category": "bangladesh",
+    "title": "Community English – Buying Vegetables at the Market",
+    "level": "A1",
+    "objectives": ["Ask price", "Bargain", "Pay"],
+    "context_bn": "আপনি বাজারে সবজি কিনছেন।",
+    "dialogues": [
+      {"speaker": "You", "en": "How much for one kilo of tomatoes?", "bn": "এক কেজি টমেটোর দাম কত?"},
+      {"speaker": "Seller", "en": "60 taka per kilo. But for you, 55 taka.", "bn": "৬০ টাকা প্রতি কেজি। তবে আপনার জন্য ৫৫ টাকা।"}
+    ],
+    "vocab": [{"word": "Kilo", "meaning": "কেজি"}, {"word": "Tomato", "meaning": "টমেটো"}],
+    "grammar_tip": "Use 'How much for ...?' to ask price.",
+    "pronunciation_tip": "Say 'tomato' as /təˈmɑːtoʊ/.",
+    "key_phrases": ["How much for one kilo of ...?", "60 taka per kilo."],
+    "quiz": [{"question": "What is the final price per kilo?", "options": ["60 taka", "55 taka", "50 taka"], "correct": 1}],
+    "xp": 10
+  },
+  {
+    "id": "bd-community-028",
+    "category": "bangladesh",
+    "title": "Community English – Asking About Religious Festivals",
+    "level": "A2",
+    "objectives": ["Ask about festival dates", "Understand customs", "Wish well"],
+    "context_bn": "আপনি ধর্মীয় উৎসব সম্পর্কে জানতে চাইছেন।",
+    "dialogues": [
+      {"speaker": "You", "en": "When is Eid this year?", "bn": "এই বছর ঈদ কখন?"},
+      {"speaker": "Friend", "en": "It will be on 22nd April. Are you celebrating?", "bn": "এটি ২২ এপ্রিল হবে। আপনি কি উদযাপন করবেন?"}
+    ],
+    "vocab": [{"word": "Eid", "meaning": "ঈদ"}, {"word": "Celebrate", "meaning": "উদযাপন করা"}],
+    "grammar_tip": "Use 'When is ...?' to ask about dates.",
+    "pronunciation_tip": "Say 'Eid' as /iːd/.",
+    "key_phrases": ["When is Eid this year?", "Are you celebrating?"],
+    "quiz": [{"question": "When is Eid this year?", "options": ["22nd April", "22nd May", "22nd June"], "correct": 0}],
+    "xp": 15
+  },
+  {
+    "id": "bd-community-029",
+    "category": "bangladesh",
+    "title": "Community English – Inviting Friends Over",
+    "level": "A2",
+    "objectives": ["Extend invitation", "Ask about availability", "Confirm"],
+    "context_bn": "আপনি বন্ধুদের বাড়িতে আমন্ত্রণ জানাচ্ছেন।",
+    "dialogues": [
+      {"speaker": "You", "en": "Would you like to come to my place on Saturday?", "bn": "আপনি কি শনিবার আমার বাড়িতে আসতে চান?"},
+      {"speaker": "Friend", "en": "Yes, I'd love to! What time?", "bn": "হ্যাঁ, খুব ভালো! কয়টায়?"}
+    ],
+    "vocab": [{"word": "Invite", "meaning": "আমন্ত্রণ করা"}, {"word": "Place", "meaning": "স্থান"}],
+    "grammar_tip": "Use 'Would you like to ...?' to invite politely.",
+    "pronunciation_tip": "Say 'invite' as /ɪnˈvaɪt/.",
+    "key_phrases": ["Would you like to come to my place on ...?", "What time?"],
+    "quiz": [{"question": "When is the invitation?", "options": ["Saturday", "Sunday", "Friday"], "correct": 0}],
+    "xp": 15
+  },
+  {
+    "id": "bd-community-030",
+    "category": "bangladesh",
+    "title": "Community English – Giving Directions to a Guest",
+    "level": "A2",
+    "objectives": ["Explain route", "Use landmarks", "Clarify"],
+    "context_bn": "আপনি একজন অতিথিকে আপনার বাড়ির দিকনির্দেশ দিচ্ছেন।",
+    "dialogues": [
+      {"speaker": "Guest", "en": "How do I get to your house from the station?", "bn": "স্টেশন থেকে আপনার বাড়িতে কীভাবে যাব?"},
+      {"speaker": "You", "en": "Take the bus to the central mosque, then walk two blocks.", "bn": "বাসে করে কেন্দ্রীয় মসজিদে যান, তারপর দুই ব্লক হাঁটুন।"}
+    ],
+    "vocab": [{"word": "Mosque", "meaning": "মসজিদ"}, {"word": "Block", "meaning": "ব্লক"}],
+    "grammar_tip": "Use imperatives to give directions.",
+    "pronunciation_tip": "Say 'mosque' as /mɒsk/.",
+    "key_phrases": ["How do I get to your house?", "Take the bus to the central mosque."],
+    "quiz": [{"question": "What landmark is mentioned in the directions?", "options": ["Central mosque", "Library", "Market"], "correct": 0}],
+    "xp": 15
+  },
+  {
+    "id": "bd-community-031",
+    "category": "bangladesh",
+    "title": "Community English – Talking About Local News",
+    "level": "B1",
+    "objectives": ["Discuss a recent event", "Express opinion", "Ask for details"],
+    "context_bn": "আপনি স্থানীয় খবর নিয়ে আলোচনা করছেন।",
+    "dialogues": [
+      {"speaker": "You", "en": "Did you hear about the new shopping mall opening?", "bn": "আপনি কি নতুন শপিং মল খোলার কথা শুনেছেন?"},
+      {"speaker": "Friend", "en": "Yes, I read about it. It's going to be huge.", "bn": "হ্যাঁ, আমি পড়েছি। এটি বিশাল হতে যাচ্ছে।"}
+    ],
+    "vocab": [{"word": "Shopping mall", "meaning": "শপিং মল"}, {"word": "Opening", "meaning": "খোলা"}],
+    "grammar_tip": "Use 'Did you hear about ...?' to start a conversation.",
+    "pronunciation_tip": "Say 'mall' as /mɔːl/.",
+    "key_phrases": ["Did you hear about ...?", "I read about it."],
+    "quiz": [{"question": "What is the news about?", "options": ["Shopping mall opening", "School closure", "New park"], "correct": 0}],
+    "xp": 20
+  },
+  {
+    "id": "bd-community-032",
+    "category": "bangladesh",
+    "title": "Community English – Requesting a Service (e.g., Plumber)",
+    "level": "A2",
+    "objectives": ["Describe problem", "Ask for service", "Schedule"],
+    "context_bn": "আপনি প্লাম্বারের সাথে যোগাযোগ করছেন।",
+    "dialogues": [
+      {"speaker": "You", "en": "My tap is leaking. Can you come and fix it?", "bn": "আমার কলটি লিক করছে। আপনি কি এসে এটি ঠিক করতে পারেন?"},
+      {"speaker": "Plumber", "en": "I can come tomorrow morning. Is that okay?", "bn": "আমি আগামীকাল সকালে আসতে পারি। কি ঠিক আছে?"}
+    ],
+    "vocab": [{"word": "Leaking", "meaning": "লিক করা"}, {"word": "Fix", "meaning": "ঠিক করা"}],
+    "grammar_tip": "Use 'My ... is leaking' to describe a problem.",
+    "pronunciation_tip": "Say 'leaking' as /ˈliːkɪŋ/.",
+    "key_phrases": ["My tap is leaking.", "Can you come and fix it?"],
+    "quiz": [{"question": "What is the problem?", "options": ["Leaking tap", "Broken pipe", "No water"], "correct": 0}],
+    "xp": 15
+  },
+  {
+    "id": "bd-community-033",
+    "category": "bangladesh",
+    "title": "Community English – Dealing with a Power Cut",
+    "level": "A2",
+    "objectives": ["Report the cut", "Ask for info", "Suggest backup"],
+    "context_bn": "আপনি বিদ্যুৎ বিভ্রাট সম্পর্কে কথা বলছেন।",
+    "dialogues": [
+      {"speaker": "You", "en": "The power has been off for 2 hours. When will it come back?", "bn": "বিদ্যুৎ ২ ঘন্টা ধরে নেই। কখন ফিরে আসবে?"},
+      {"speaker": "Rep", "en": "We are working on it. It should be restored soon.", "bn": "আমরা কাজ করছি। শীঘ্রই পুনরুদ্ধার করা উচিত।"}
+    ],
+    "vocab": [{"word": "Power cut", "meaning": "বিদ্যুৎ বিভ্রাট"}, {"word": "Restored", "meaning": "পুনরুদ্ধার করা"}],
+    "grammar_tip": "Use 'has been off' to describe duration.",
+    "pronunciation_tip": "Say 'power' as /ˈpaʊər/.",
+    "key_phrases": ["The power has been off for ...", "When will it come back?"],
+    "quiz": [{"question": "How long has the power been off?", "options": ["1 hour", "2 hours", "3 hours"], "correct": 1}],
+    "xp": 15
+  },
+  {
+    "id": "bd-community-034",
+    "category": "bangladesh",
+    "title": "Community English – Asking About Road Conditions",
+    "level": "A2",
+    "objectives": ["Ask about traffic", "Check route", "Plan travel"],
+    "context_bn": "আপনি একটি রাস্তার অবস্থা সম্পর্কে জিজ্ঞাসা করছেন।",
+    "dialogues": [
+      {"speaker": "You", "en": "How is the traffic on the main road today?", "bn": "আজ মূল সড়কে যানজট কেমন?"},
+      {"speaker": "Informant", "en": "It's very heavy. You might want to take a detour.", "bn": "খুব বেশি। আপনি সম্ভবত বিকল্প পথ নিতে পারেন।"}
+    ],
+    "vocab": [{"word": "Traffic", "meaning": "যানজট"}, {"word": "Detour", "meaning": "বিকল্প পথ"}],
+    "grammar_tip": "Use 'How is the traffic ...?' to ask about conditions.",
+    "pronunciation_tip": "Say 'traffic' as /ˈtræfɪk/.",
+    "key_phrases": ["How is the traffic on the main road?", "You might want to take a detour."],
+    "quiz": [{"question": "What is the traffic condition?", "options": ["Heavy", "Light", "Normal"], "correct": 0}],
+    "xp": 15
+  },
+  {
+    "id": "bd-community-035",
+    "category": "bangladesh",
+    "title": "Community English – Hiring a Domestic Helper",
+    "level": "B1",
+    "objectives": ["State requirements", "Ask about experience", "Negotiate salary"],
+    "context_bn": "আপনি একটি গৃহস্থালি সহায়ক নিয়োগ করছেন।",
+    "dialogues": [
+      {"speaker": "You", "en": "We need someone to clean and cook. Do you have experience?", "bn": "আমাদের পরিষ্কার এবং রান্না করার জন্য কাউকে দরকার। আপনার কি অভিজ্ঞতা আছে?"},
+      {"speaker": "Applicant", "en": "Yes, I have worked in similar homes for 2 years.", "bn": "হ্যাঁ, আমি ২ বছর ধরে একই রকম বাড়িতে কাজ করেছি।"}
+    ],
+    "vocab": [{"word": "Clean", "meaning": "পরিষ্কার করা"}, {"word": "Cook", "meaning": "রান্না করা"}],
+    "grammar_tip": "Use 'We need someone to ...' to state hiring need.",
+    "pronunciation_tip": "Say 'experience' as /ɪkˈspɪəriəns/.",
+    "key_phrases": ["We need someone to ...", "Do you have experience?"],
+    "quiz": [{"question": "What duties are required?", "options": ["Cleaning and cooking", "Gardening", "Driving"], "correct": 0}],
+    "xp": 20
+  },
+  {
+    "id": "bd-community-036",
+    "category": "bangladesh",
+    "title": "Community English – Asking About School Enrollment",
+    "level": "A2",
+    "objectives": ["Ask about admission", "Check requirements", "Understand fees"],
+    "context_bn": "আপনি একটি স্কুলে ভর্তির তথ্য জানতে চাইছেন।",
+    "dialogues": [
+      {"speaker": "You", "en": "What documents are needed for admission to Class 5?", "bn": "পঞ্চম শ্রেণিতে ভর্তির জন্য কী কী নথি দরকার?"},
+      {"speaker": "Staff", "en": "You need the birth certificate and previous report card.", "bn": "আপনার জন্ম সনদ এবং আগের রিপোর্ট কার্ড দরকার।"}
+    ],
+    "vocab": [{"word": "Admission", "meaning": "ভর্তি"}, {"word": "Birth certificate", "meaning": "জন্ম সনদ"}],
+    "grammar_tip": "Use 'What documents are needed for ...?' to ask about requirements.",
+    "pronunciation_tip": "Say 'certificate' as /səˈtɪfɪkət/.",
+    "key_phrases": ["What documents are needed for admission?", "You need the birth certificate."],
+    "quiz": [{"question": "Which document is required for admission?", "options": ["Birth certificate", "Passport", "License"], "correct": 0}],
+    "xp": 15
+  },
+  {
+    "id": "bd-community-037",
+    "category": "bangladesh",
+    "title": "Community English – Asking About Public Transport",
+    "level": "A2",
+    "objectives": ["Ask about bus routes", "Inquire about fares", "Get schedule"],
+    "context_bn": "আপনি পাবলিক পরিবহন সম্পর্কে জিজ্ঞাসা করছেন।",
+    "dialogues": [
+      {"speaker": "You", "en": "Which bus goes to the University?", "bn": "কোন বাস বিশ্ববিদ্যালয়ে যায়?"},
+      {"speaker": "Driver", "en": "Take the number 4 bus. It stops at the main gate.", "bn": "৪ নম্বর বাস ধরুন। এটি মূল গেটে থামে।"}
+    ],
+    "vocab": [{"word": "Bus route", "meaning": "বাস রুট"}, {"word": "Fare", "meaning": "ভাড়া"}],
+    "grammar_tip": "Use 'Which bus goes to ...?' to ask about routes.",
+    "pronunciation_tip": "Say 'route' as /ruːt/.",
+    "key_phrases": ["Which bus goes to ...?", "Take the number 4 bus."],
+    "quiz": [{"question": "Which bus should the person take?", "options": ["Number 4", "Number 5", "Number 6"], "correct": 0}],
+    "xp": 15
+  },
+  {
+    "id": "bd-community-038",
+    "category": "bangladesh",
+    "title": "Community English – Ordering Food at a Local Restaurant",
+    "level": "A1",
+    "objectives": ["Read menu", "Order", "Ask for bill"],
+    "context_bn": "আপনি একটি স্থানীয় রেস্টুরেন্টে খাবার অর্ডার করছেন।",
+    "dialogues": [
+      {"speaker": "You", "en": "I'll have the biryani and a cold drink.", "bn": "আমি বিরিয়ানি এবং একটি ঠান্ডা পানীয় নেব।"},
+      {"speaker": "Waiter", "en": "Would you like some extra sauce?", "bn": "আপনি কি কিছু অতিরিক্ত সস চাইবেন?"}
+    ],
+    "vocab": [{"word": "Biryani", "meaning": "বিরিয়ানি"}, {"word": "Sauce", "meaning": "সস"}],
+    "grammar_tip": "Use 'I'll have ...' to order.",
+    "pronunciation_tip": "Say 'biryani' as /ˌbɪrɪˈjɑːni/.",
+    "key_phrases": ["I'll have the biryani.", "Would you like some extra sauce?"],
+    "quiz": [{"question": "What did the customer order?", "options": ["Biryani and a cold drink", "Biryani only", "Cold drink only"], "correct": 0}],
+    "xp": 10
+  },
+  {
+    "id": "bd-community-039",
+    "category": "bangladesh",
+    "title": "Community English – Talking About Inflation/Price Increase",
+    "level": "B1",
+    "objectives": ["Discuss rising prices", "Express concern", "Share tips"],
+    "context_bn": "আপনি বাজারের দাম বৃদ্ধি নিয়ে কথা বলছেন।",
+    "dialogues": [
+      {"speaker": "You", "en": "Prices have gone up a lot this month.", "bn": "এ মাসে দাম অনেক বেড়েছে।"},
+      {"speaker": "Friend", "en": "Yes, especially for vegetables and oil.", "bn": "হ্যাঁ, বিশেষ করে সবজি এবং তেলের জন্য।"}
+    ],
+    "vocab": [{"word": "Prices", "meaning": "দাম"}, {"word": "Oil", "meaning": "তেল"}],
+    "grammar_tip": "Use present perfect 'have gone up' to describe recent changes.",
+    "pronunciation_tip": "Say 'prices' as /ˈpraɪsɪz/.",
+    "key_phrases": ["Prices have gone up a lot this month.", "Especially for vegetables and oil."],
+    "quiz": [{"question": "What has increased in price?", "options": ["Vegetables and oil", "Clothes", "Electronics"], "correct": 0}],
+    "xp": 20
+  },
+  {
+    "id": "bd-community-040",
+    "category": "bangladesh",
+    "title": "Community English – Talking About a New Job",
+    "level": "A2",
+    "objectives": ["Share news", "Describe role", "Ask about others"],
+    "context_bn": "আপনি আপনার নতুন চাকরি সম্পর্কে কথা বলছেন।",
+    "dialogues": [
+      {"speaker": "You", "en": "I got a new job at a bank.", "bn": "আমি একটি ব্যাংকে নতুন চাকরি পেয়েছি।"},
+      {"speaker": "Friend", "en": "Congratulations! What will you do there?", "bn": "অভিনন্দন! সেখানে আপনি কী করবেন?"}
+    ],
+    "vocab": [{"word": "Job", "meaning": "চাকরি"}, {"word": "Bank", "meaning": "ব্যাংক"}],
+    "grammar_tip": "Use simple past 'got' for recent events.",
+    "pronunciation_tip": "Say 'congratulations' as /kənˌɡrætʃʊˈleɪʃənz/.",
+    "key_phrases": ["I got a new job at ...", "Congratulations!"],
+    "quiz": [{"question": "Where did the person get a new job?", "options": ["Bank", "School", "Hospital"], "correct": 0}],
+    "xp": 15
+  },
+  {
+    "id": "bd-community-041",
+    "category": "bangladesh",
+    "title": "Community English – Asking About Internet Connection",
+    "level": "A2",
+    "objectives": ["Check connection", "Report problem", "Get support"],
+    "context_bn": "আপনি ইন্টারনেট সংযোগ সম্পর্কে জিজ্ঞাসা করছেন।",
+    "dialogues": [
+      {"speaker": "You", "en": "My internet is very slow. Can you check it?", "bn": "আমার ইন্টারনেট খুব ধীর। আপনি কি এটি পরীক্ষা করতে পারেন?"},
+      {"speaker": "Tech", "en": "I'll run a diagnostic test. Please wait.", "bn": "আমি একটি ডায়াগনস্টিক পরীক্ষা চালাব। অনুগ্রহ করে অপেক্ষা করুন।"}
+    ],
+    "vocab": [{"word": "Slow", "meaning": "ধীর"}, {"word": "Diagnostic", "meaning": "ডায়াগনস্টিক"}],
+    "grammar_tip": "Use 'My internet is ...' to describe a problem.",
+    "pronunciation_tip": "Say 'internet' as /ˈɪntərnɛt/.",
+    "key_phrases": ["My internet is very slow.", "I'll run a diagnostic test."],
+    "quiz": [{"question": "What is the problem with the internet?", "options": ["Slow", "No connection", "Expensive"], "correct": 0}],
+    "xp": 15
+  },
+  {
+    "id": "bd-community-042",
+    "category": "bangladesh",
+    "title": "Community English – Negotiating a Price at a Shop",
+    "level": "B1",
+    "objectives": ["Ask for discount", "Justify offer", "Finalize"],
+    "context_bn": "আপনি একটি দোকানে দাম নিয়ে দর কষাকষি করছেন।",
+    "dialogues": [
+      {"speaker": "You", "en": "Can you give me a discount if I buy two?", "bn": "আমি যদি দুটি কিনি তবে কি আপনি ডিসকাউন্ট দিতে পারেন?"},
+      {"speaker": "Seller", "en": "If you buy two, I can give you 10% off.", "bn": "যদি আপনি দুটি কিনেন, তাহলে আমি ১০% ছাড় দিতে পারি。"}
+    ],
+    "vocab": [{"word": "Discount", "meaning": "ছাড়"}, {"word": "Off", "meaning": "কমানো"}],
+    "grammar_tip": "Use 'Can you give me a discount if ...?' to negotiate.",
+    "pronunciation_tip": "Say 'discount' as /ˈdɪskaʊnt/.",
+    "key_phrases": ["Can you give me a discount if I buy two?", "I can give you 10% off."],
+    "quiz": [{"question": "What discount is offered?", "options": ["10%", "5%", "15%"], "correct": 0}],
+    "xp": 20
+  },
+  {
+    "id": "bd-community-043",
+    "category": "bangladesh",
+    "title": "Community English – Asking About a Rental Property",
+    "level": "B1",
+    "objectives": ["Ask about rent", "Inquire about facilities", "Schedule visit"],
+    "context_bn": "আপনি একটি ভাড়া বাড়ি সম্পর্কে জিজ্ঞাসা করছেন।",
+    "dialogues": [
+      {"speaker": "You", "en": "How much is the rent for this apartment?", "bn": "এই অ্যাপার্টমেন্টের ভাড়া কত?"},
+      {"speaker": "Agent", "en": "It's 15,000 taka per month. Water and gas are included.", "bn": "এটি প্রতি মাসে ১৫,০০০ টাকা। জল এবং গ্যাস অন্তর্ভুক্ত।"}
+    ],
+    "vocab": [{"word": "Rent", "meaning": "ভাড়া"}, {"word": "Apartment", "meaning": "অ্যাপার্টমেন্ট"}],
+    "grammar_tip": "Use 'How much is the rent for ...?' to ask about cost.",
+    "pronunciation_tip": "Say 'apartment' as /əˈpɑːrtmənt/.",
+    "key_phrases": ["How much is the rent for this apartment?", "Water and gas are included."],
+    "quiz": [{"question": "What is the monthly rent?", "options": ["15,000 taka", "10,000 taka", "20,000 taka"], "correct": 0}],
+    "xp": 20
+  },
+  {
+    "id": "bd-community-044",
+    "category": "bangladesh",
+    "title": "Community English – Asking About Healthcare Services",
+    "level": "B1",
+    "objectives": ["Ask about clinic hours", "Inquire about doctor availability", "Make appointment"],
+    "context_bn": "আপনি একটি ক্লিনিকের সেবা সম্পর্কে জিজ্ঞাসা করছেন।",
+    "dialogues": [
+      {"speaker": "You", "en": "What are the clinic hours on weekends?", "bn": "সপ্তাহান্তে ক্লিনিকের সময় কত?"},
+      {"speaker": "Receptionist", "en": "We are open from 9 am to 12 pm on Saturdays.", "bn": "আমরা শনিবার সকাল ৯টা থেকে দুপুর ১২টা পর্যন্ত খোলা থাকি।"}
+    ],
+    "vocab": [{"word": "Clinic", "meaning": "ক্লিনিক"}, {"word": "Weekend", "meaning": "সপ্তাহান্ত"}],
+    "grammar_tip": "Use 'What are the ... hours?' to ask about opening times.",
+    "pronunciation_tip": "Say 'clinic' as /ˈklɪnɪk/.",
+    "key_phrases": ["What are the clinic hours on weekends?", "We are open from ... to ..."],
+    "quiz": [{"question": "When is the clinic open on Saturdays?", "options": ["9 am to 12 pm", "9 am to 5 pm", "10 am to 2 pm"], "correct": 0}],
+    "xp": 20
+  },
+  {
+    "id": "bd-community-045",
+    "category": "bangladesh",
+    "title": "Community English – Talking About a Child's Education",
+    "level": "A2",
+    "objectives": ["Ask about school", "Discuss subjects", "Share concerns"],
+    "context_bn": "আপনি সন্তানের শিক্ষা নিয়ে কথা বলছেন।",
+    "dialogues": [
+      {"speaker": "You", "en": "Which school does your child go to?", "bn": "আপনার সন্তান কোন স্কুলে যায়?"},
+      {"speaker": "Friend", "en": "She goes to the local government school.", "bn": "তিনি স্থানীয় সরকারি স্কুলে যান।"}
+    ],
+    "vocab": [{"word": "Child", "meaning": "সন্তান"}, {"word": "School", "meaning": "স্কুল"}],
+    "grammar_tip": "Use 'Which school does ...?' to ask about education.",
+    "pronunciation_tip": "Say 'school' as /skuːl/.",
+    "key_phrases": ["Which school does your child go to?", "She goes to the local government school."],
+    "quiz": [{"question": "Where does the friend's child go to school?", "options": ["Local government school", "Private school", "International school"], "correct": 0}],
+    "xp": 15
+  },
+  {
+    "id": "bd-community-046",
+    "category": "bangladesh",
+    "title": "Community English – Asking About a New Mosque/Community Center",
+    "level": "A2",
+    "objectives": ["Ask about location", "Check schedule", "Get directions"],
+    "context_bn": "আপনি একটি নতুন মসজিদ বা কমিউনিটি সেন্টারের তথ্য জানতে চাইছেন।",
+    "dialogues": [
+      {"speaker": "You", "en": "Where is the new community center located?", "bn": "নতুন কমিউনিটি সেন্টারটি কোথায় অবস্থিত?"},
+      {"speaker": "Guide", "en": "It's near the main market, behind the school.", "bn": "এটি মূল বাজারের কাছে, স্কুলের পিছনে।"}
+    ],
+    "vocab": [{"word": "Community center", "meaning": "কমিউনিটি সেন্টার"}, {"word": "Located", "meaning": "অবস্থিত"}],
+    "grammar_tip": "Use 'Where is ... located?' to ask for location.",
+    "pronunciation_tip": "Say 'located' as /loʊˈkeɪtɪd/.",
+    "key_phrases": ["Where is the new community center located?", "It's near the main market."],
+    "quiz": [{"question": "Where is the community center?", "options": ["Near the main market", "Near the station", "Near the park"], "correct": 0}],
+    "xp": 15
+  },
+  {
+    "id": "bd-community-047",
+    "category": "bangladesh",
+    "title": "Community English – Asking About a Cleaning Service",
+    "level": "A2",
+    "objectives": ["Ask about service", "Get quote", "Schedule"],
+    "context_bn": "আপনি একটি পরিষ্কার পরিষেবা সম্পর্কে জিজ্ঞাসা করছেন।",
+    "dialogues": [
+      {"speaker": "You", "en": "How much do you charge for a full house cleaning?", "bn": "একটি সম্পূর্ণ বাড়ি পরিষ্কার করার জন্য আপনি কত টাকা নেন?"},
+      {"speaker": "Service Provider", "en": "It's 1,500 taka for a 2-bedroom house.", "bn": "একটি ২-বেডরুম বাড়ির জন্য ১,৫০০ টাকা।"}
+    ],
+    "vocab": [{"word": "Charge", "meaning": "চার্জ করা"}, {"word": "Cleaning", "meaning": "পরিষ্কার"}],
+    "grammar_tip": "Use 'How much do you charge for ...?' to ask price.",
+    "pronunciation_tip": "Say 'charge' as /tʃɑːrdʒ/.",
+    "key_phrases": ["How much do you charge for ...?", "It's ... taka for a ..."],
+    "quiz": [{"question": "How much does the cleaning service cost?", "options": ["1,500 taka", "2,000 taka", "1,000 taka"], "correct": 0}],
+    "xp": 15
+  },
+  {
+    "id": "bd-community-048",
+    "category": "bangladesh",
+    "title": "Community English – Asking About Local Sports Events",
+    "level": "A2",
+    "objectives": ["Ask about events", "Get tickets", "Understand rules"],
+    "context_bn": "আপনি একটি স্থানীয় খেলার ইভেন্ট সম্পর্কে জিজ্ঞাসা করছেন।",
+    "dialogues": [
+      {"speaker": "You", "en": "Is there a cricket match this weekend?", "bn": "এই সপ্তাহান্তে কি কোন ক্রিকেট ম্যাচ আছে?"},
+      {"speaker": "Organizer", "en": "Yes, on Saturday at the stadium. Tickets are available at the gate.", "bn": "হ্যাঁ, শনিবার স্টেডিয়ামে। গেটে টিকিট পাওয়া যাবে।"}
+    ],
+    "vocab": [{"word": "Cricket", "meaning": "ক্রিকেট"}, {"word": "Stadium", "meaning": "স্টেডিয়াম"}],
+    "grammar_tip": "Use 'Is there a ... this weekend?' to ask about events.",
+    "pronunciation_tip": "Say 'cricket' as /ˈkrɪkɪt/.",
+    "key_phrases": ["Is there a cricket match this weekend?", "Tickets are available at the gate."],
+    "quiz": [{"question": "When is the cricket match?", "options": ["Saturday", "Sunday", "Friday"], "correct": 0}],
+    "xp": 15
+  },
+  {
+    "id": "bd-community-049",
+    "category": "bangladesh",
+    "title": "Community English – Asking About a New Restaurant Opening",
+    "level": "A2",
+    "objectives": ["Ask about opening date", "Inquire about menu", "Make reservation"],
+    "context_bn": "আপনি একটি নতুন রেস্টুরেন্ট খোলার বিষয়ে জিজ্ঞাসা করছেন।",
+    "dialogues": [
+      {"speaker": "You", "en": "When does the new restaurant open?", "bn": "নতুন রেস্টুরেন্ট কখন খোলে?"},
+      {"speaker": "Owner", "en": "We are opening on August 1st. You can pre-order online.", "bn": "আমরা ১ আগস্ট খুলছি। আপনি অনলাইনে অর্ডার করতে পারেন।"}
+    ],
+    "vocab": [{"word": "Restaurant", "meaning": "রেস্টুরেন্ট"}, {"word": "Pre-order", "meaning": "প্রি-অর্ডার"}],
+    "grammar_tip": "Use 'When does ... open?' to ask for a date.",
+    "pronunciation_tip": "Say 'restaurant' as /ˈrɛstərɒnt/.",
+    "key_phrases": ["When does the new restaurant open?", "You can pre-order online."],
+    "quiz": [{"question": "When does the restaurant open?", "options": ["August 1st", "August 10th", "August 20th"], "correct": 0}],
+    "xp": 15
+  },
+  {
+    "id": "bd-community-050",
+    "category": "bangladesh",
+    "title": "Community English – Asking About a New Park or Playground",
+    "level": "A1",
+    "objectives": ["Ask about location", "Check opening hours", "Ask about facilities"],
+    "context_bn": "আপনি একটি নতুন পার্ক বা খেলার মাঠ সম্পর্কে জিজ্ঞাসা করছেন।",
+    "dialogues": [
+      {"speaker": "You", "en": "Where is the new playground?", "bn": "নতুন খেলার মাঠটি কোথায়?"},
+      {"speaker": "Info", "en": "It's next to the community center. It's open from 6 am to 8 pm.", "bn": "এটি কমিউনিটি সেন্টারের পাশে। এটি সকাল ৬টা থেকে রাত ৮টা পর্যন্ত খোলা থাকে।"}
+    ],
+    "vocab": [{"word": "Playground", "meaning": "খেলার মাঠ"}, {"word": "Open", "meaning": "খোলা"}],
+    "grammar_tip": "Use 'Where is ...?' to ask for location.",
+    "pronunciation_tip": "Say 'playground' as /ˈpleɪɡraʊnd/.",
+    "key_phrases": ["Where is the new playground?", "It's next to the community center."],
+    "quiz": [{"question": "Where is the playground located?", "options": ["Next to the community center", "Near the station", "Behind the market"], "correct": 0}],
+    "xp": 10
+  }
+]

@@ -1,0 +1,19 @@
+# อออ PROTECT 50,000 GENERATED DICTIONARY PAGES อออ 
+word/ 
+ 
+# อออ PROTECT LARGE GENERATED JSON FILES อออ 
+search-index.json 
+enriched-dictionary.json 
+related_links_map.json 
+content-map.json 
+ 
+# อออ PROTECT BACKUPS AND CACHE อออ 
+backups/ 
+git_backup/ 
+__pycache__/ 
+*.pyc 
+.env 
+graph_data/*.gexf 
+tts-button.js 
+GEMINI_API_KEY* 
+service_account.json 
